@@ -29,7 +29,7 @@ Resources:
     Properties:
       FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-GetHelloWorld'
       Handler: index.get
-      Runtime: nodejs12.x
+      Runtime: nodejs10.16.3
       Role:
         Fn::GetAtt:
         - LambdaExecutionRole
