@@ -16,7 +16,7 @@
   "keywords": ["sierra", "website"],
   "scripts": {
     "start": "parcel src/index.html --port 2222",
-    "test": "npm run lint && npm run t && npm run viewcoverage",
+    "test:dev": "npm run lint && npm run t && npm run viewcoverage",
     "t": "jest --colors --collectCoverage ./",
     "lint": "eslint ./",
     "viewcoverage": "open ./coverage/lcov-report/index.html"
