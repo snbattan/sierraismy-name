@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/snbattan/website/issues"
   },
-  "main": "public/index.html",
+  "main": "index.html",
   "keywords": ["sierra", "website"],
   "scripts": {
     "start": "parcel src/index.html --port 2222",
