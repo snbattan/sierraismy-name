@@ -1,0 +1,70 @@
+/*  COLORS  */
+
+hr {
+  border: 1px solid;
+  border-color: inherit;
+}
+.light {
+  background-color: #F2FAFF;
+  border-color: #FFB300;
+  color: #006064;
+  height: 100vh;
+  outline-color: #FFB300;
+  overflow: auto;
+  transition: background-color 0.3s, color 0.3s;
+  width: full;
+}.dark {
+  background-color: #1F2D36;
+  border-color: #FFE082;
+  color: #B2EBF2;
+  height: 100vh;
+  outline-color: #FFE082;
+  overflow: auto;
+  transition: background-color 0.3s, color 0.3s;
+  width: full;
+}
+
+/*  SIZING  */
+
+.material-icons.sm {
+  font-size: 14px;
+}.material-icons.lg {
+  font-size: 36px;
+}
+
+/*  SPACING  */
+
+.row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+}.col {
+  align-items: center;
+  display: inline;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding-top: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+}.ta-l {
+  text-align: left;
+  align-items: left;
+}.ta-c {
+  text-align: center;
+  align-items: center;
+}.ta-r {
+  text-align: right;
+  align-items: right;
+}.va-t {
+  vertical-align: top;
+}.va-m {
+  vertical-align: middle;
+}.va-b {
+  vertical-align: bottom;
+}
