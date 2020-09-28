@@ -1,39 +1,36 @@
-import { Button, ThemeProvider } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Footer = (props) => (
-  <ThemeProvider theme={props.theme}>
-    <hr />
-    <footer className="row">
-      <p className="col ta-r">
-        <Button
-          color="primary"
-          // eslint-disable-next-line no-alert
-          onClick={() => alert('Hey!')}
-          style={{ borderRadius: 16 }}
-          variant="contained"
-        >
-          Hey
-        </Button>
-      </p>
-      <p className="col ta-l">
-        <Button
-          color="secondary"
-          // eslint-disable-next-line no-alert
-          onClick={() => alert('Bye!')}
-          style={{ borderRadius: 16 }}
-          variant="contained"
-        >
-          Bye
-        </Button>
-      </p>
-    </footer>
-  </ThemeProvider>
+const socialIcons = [
+  { link: 'https://www.facebook.com/snbattan', name: 'facebook' },
+  { link: 'https://twitter.com/sierrabattan', name: 'twitter' },
+  { link: 'https://www.linkedin.com/in/snbattan/', name: 'linkedin' },
+  { link: 'https://github.com/snbattan', name: 'github' },
+  { link: 'https://www.youtube.com/channel/UCwqywRwVXJpNAL4Zbck245Q', name: 'youtube' },
+  { link: 'https://www.instagram.com/sierrabattan/', name: 'instagram' },
+  { link: 'https://www.pinterest.com/snbattan/_saved/', name: 'pinterest' },
+];
+
+const SocialIcon = ({ social }) => (
+  <a href={social.link} label={social.name} rel="noopener noreferrer" target="_blank"><i className={`fa fa-${social.name}`} /></a>
 );
 
-Footer.propTypes = {
-  theme: PropTypes.shape().isRequired,
+SocialIcon.propTypes = {
+  social: PropTypes.shape({
+    link: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
+
+const Footer = () => (
+  <>
+    <hr />
+    <footer className="row" style={{ marginBottom: '16px' }}>
+      <h4 className="col ta-c">
+        {socialIcons.map((social) => <SocialIcon key={social.name} social={social} />)}
+      </h4>
+    </footer>
+  </>
+);
 
 export default Footer;

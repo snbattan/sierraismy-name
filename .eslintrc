@@ -171,7 +171,7 @@
     "semi": "error",
     "semi-spacing": "error",
     "semi-style": "error",
-    "sort-imports": "error",
+    "sort-imports": "off",
     "sort-keys": "error",
     "sort-vars": "error",
     "space-before-blocks": "error",

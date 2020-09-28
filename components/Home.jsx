@@ -1,17 +1,10 @@
-import { ThemeProvider, Typography } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = (props) => (
-  <ThemeProvider theme={props.theme}>
-    <main className="col ta-c">
-      <Typography>Welcome Home</Typography>
-    </main>
-  </ThemeProvider>
+const Header = () => (
+  <article className="col ta-c">
+    <h2>Welcome Home</h2>
+    <h4>... More Coming Soon ...</h4>
+  </article>
 );
-
-Header.propTypes = {
-  theme: PropTypes.shape().isRequired,
-};
 
 export default Header;
