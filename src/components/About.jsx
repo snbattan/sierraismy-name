@@ -20,7 +20,7 @@ const testimonials = [
 
 const AboutMe = () => (
   <article className="col ta-c va-t">
-    <h4>Who is Sierra?</h4>
+    <h2>Who is Sierra?</h2>
     <p>Good question. If you know the answer, please let her know! In the mean time, feel free to explore this page for some clues.</p>
     <br />
     <section className="col">

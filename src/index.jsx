@@ -20,24 +20,22 @@ const App = () => {
 
   return (
     <Router>
-      <main className={isDarkTheme ? 'dark' : 'light'}>
+      <body className={`parent ${isDarkTheme ? 'dark' : 'light'}`}>
         <Header invertTheme={invertTheme} />
-        <main className="row">
-          <nav>
-            <ul style={{ listStyleType: 'none', marginTop: '16px' }}>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Me</Link></li>
-            </ul>
-          </nav>
-          <main style={{ alignSelf: 'start', width: '81%' }}>
-            <Switch>
-              <Route path="/about" component={About} />
-              <Route path="/" component={Home} />
-            </Switch>
-          </main>
+        <nav className="side-nav">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Me</Link></li>
+          </ul>
+        </nav>
+        <main className="center">
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/" component={Home} />
+          </Switch>
         </main>
         <Footer />
-      </main>
+      </body>
     </Router>
   );
 };

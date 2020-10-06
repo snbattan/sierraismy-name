@@ -12,7 +12,7 @@ const socialIcons = [
 ];
 
 const SocialIcon = ({ social }) => (
-  <a href={social.link} label={social.name} rel="noopener noreferrer" target="_blank"><i className={`fa fa-${social.name}`} /></a>
+  <a href={social.link} rel="noopener noreferrer" label={social.name} target="_blank"><i className={`fa fa-${social.name}`} style={{ fontSize: '24px' }} /></a>
 );
 
 SocialIcon.propTypes = {
@@ -23,14 +23,11 @@ SocialIcon.propTypes = {
 };
 
 const Footer = () => (
-  <>
-    <hr />
-    <footer className="row" style={{ marginBottom: '16px' }}>
-      <h4 className="col ta-c">
-        {socialIcons.map((social) => <SocialIcon key={social.name} social={social} />)}
-      </h4>
-    </footer>
-  </>
+  <footer className="row">
+    <h4 className="col ta-c">
+      {socialIcons.map((social) => <SocialIcon key={social.name} social={social} />)}
+    </h4>
+  </footer>
 );
 
 export default Footer;
