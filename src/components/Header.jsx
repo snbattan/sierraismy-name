@@ -1,28 +1,38 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Header = (props) => (
-  <header className="row">
-    <title className="col ta-l">
-      <h1>
-        <i className="fa fa-star" style={{ fontSize: '38px' }} />SIERRA BATTAN
-      </h1>
-    </title>
-    <aside>
-      <h1 className="col ta-r">
-        <i
-          className="fa fa-adjust"
-          onClick={props.invertTheme}
-          onKeyPress={props.invertTheme}
-          label="invert-colors"
-          role="button"
-          style={{ fontSize: '38px' }}
-          tabIndex={0}
-        />&nbsp;
-      </h1>
-    </aside>
-  </header>
-);
+const Header = (props) => {
+  const [flip, toggleFlip] = useState(true);
+
+  return (
+    <header className="book-end">
+      <header className="col-12">
+        <h1 style={{ marginBottom: '-25px', marginTop: '8px' }}>Sierra Battan</h1>
+        <h3 style={{ marginBottom: '-5px' }}>
+          <i
+            className={`fa fa-adjust ${flip ? 'left' : 'right'}`}
+            onClick={() => {
+              toggleFlip(!flip);
+              props.invertTheme();
+            }}
+            onKeyPress={props.invertTheme}
+            label="invert-colors"
+            role="button"
+            tabIndex={0}
+          />
+          SOFTWARE ENGINEER
+        </h3>
+      </header>
+      <nav className="col-12 ta-r">
+        <ul>
+          <li><NavLink exact to="/about">ABOUT ME</NavLink></li>
+          <li><NavLink exact to="/">HOME</NavLink></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 Header.propTypes = {
   invertTheme: PropTypes.func.isRequired,

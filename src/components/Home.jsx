@@ -1,9 +1,11 @@
 import React from 'react';
 
+import memoji from '../images/memoji.png';
+
 const Header = () => (
-  <article className="col ta-c va-t">
-    <h2>Welcome Home</h2>
-    <h4>... More Coming Soon ...</h4>
+  <article className="col-12 ta-c">
+    <h2>Welcome!</h2>
+    <img alt="Sierra Memoji" src={memoji} style={{ width: '150px' }} />
   </article>
 );
 

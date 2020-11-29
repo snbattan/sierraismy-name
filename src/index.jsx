@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import About from './components/About';
 import Footer from './components/Footer';
@@ -20,22 +15,16 @@ const App = () => {
 
   return (
     <Router>
-      <body className={`parent ${isDarkTheme ? 'dark' : 'light'}`}>
+      <main className={`parent ${isDarkTheme ? 'dark' : 'light'}`}>
         <Header invertTheme={invertTheme} />
-        <nav className="side-nav">
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Me</Link></li>
-          </ul>
-        </nav>
-        <main className="center">
+        <article className="center">
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/" component={Home} />
           </Switch>
-        </main>
+        </article>
         <Footer />
-      </body>
+      </main>
     </Router>
   );
 };
