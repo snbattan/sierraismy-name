@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import About from './components/About';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Home from './components/Home';
+import {
+  About, Footer, Header, Home, Resume,
+} from './components';
 
 import './index.css';
 
@@ -20,6 +19,7 @@ const App = () => {
         <article className="center">
           <Switch>
             <Route path="/about" component={About} />
+            <Route path="/resume" component={Resume} />
             <Route path="/" component={Home} />
           </Switch>
         </article>

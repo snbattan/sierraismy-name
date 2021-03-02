@@ -5,7 +5,7 @@
   "main": "public/index.html",
   "scripts": {
     "build": "react-scripts build",
-    "deploy": "aws s3 sync build/ s3://sierraismy.name --acl public-read",
+    "deploy": "aws s3 sync build/ s3://sierraismy-name --acl public-read",
     "start": "parcel public/index.html --port 2222",
     "lint": "./node_modules/.bin/eslint . --ext .js,.jsx"
   },

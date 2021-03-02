@@ -12,12 +12,15 @@ const Header = (props) => {
         <h3 style={{ marginBottom: '-5px' }}>
           <i
             className={`fa fa-adjust ${flip ? 'left' : 'right'}`}
+            label="invert-colors"
             onClick={() => {
               toggleFlip(!flip);
               props.invertTheme();
             }}
-            onKeyPress={props.invertTheme}
-            label="invert-colors"
+            onKeyPress={() => {
+              toggleFlip(!flip);
+              props.invertTheme();
+            }}
             role="button"
             tabIndex={0}
           />
@@ -26,8 +29,9 @@ const Header = (props) => {
       </header>
       <nav className="col-12 ta-r">
         <ul>
-          <li><NavLink exact to="/about">ABOUT ME</NavLink></li>
-          <li><NavLink exact to="/">HOME</NavLink></li>
+          <li className="nav"><NavLink exact to="/resume">RESUME</NavLink></li>
+          <li className="nav"><NavLink exact to="/about">ABOUT ME</NavLink></li>
+          <li className="nav"><NavLink exact to="/">HOME</NavLink></li>
         </ul>
       </nav>
     </header>
