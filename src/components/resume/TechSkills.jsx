@@ -21,7 +21,7 @@ const tools = [
   'Jenkins',
   'Splunk',
   'PagerDuty',
-  'SerivceNow',
+  'ServiceNow',
   'JIRA',
   'Confluence',
   'Bitbucket',
