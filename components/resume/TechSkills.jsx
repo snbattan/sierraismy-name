@@ -26,13 +26,14 @@ const tools = [
   'Confluence',
   'Bitbucket',
   'GitHub',
-  'SignalFX',
-  'NewRelic',
+  'NextJS',
   'Docker',
   'Figma',
   'Sketch',
+  'SignalFX',
+  'NewRelic',
   'React Native',
-  // 'SEO', 'NextJS',
+  'SEO',
   'and more!',
 ];
 

@@ -1,20 +1,21 @@
 /* BASIC */
 :root {
-  --light-color: rgb(223, 234, 253);
-  --prime-color: rgb(183, 208, 247);
-  --vivid-color: rgb(128, 176, 248);
-  --shade-color: rgb(51, 89, 145);
+  --light-color: rgb(223, 234, 253); /* #DFEAFD */
+  --prime-color: rgb(183, 208, 247); /* #b7d0f7 */
+  --vivid-color: rgb(128, 176, 248); /* #80b0f8 */  
+  --shade-color: rgb(51, 89, 145); /* #335991 */
   --white-color: rgb(255, 255, 255);
   --lgray-color: rgb(242, 242, 242);
   --mgray-color: rgb(177, 180, 184);
   --dgray-color: rgb(98, 101, 108);
   --bgray-color: rgb(53, 54, 58);
-  --black-color: rgb(34, 37, 42);
+  --black-color: rgb(34, 37, 42); /* #22252A */
   --error-color: rgb(251, 185, 173);
   --third-color: rgb(251, 224, 173);
 }
 html, body, main {
-  font-family: Catamaran, Tahoma, Geneva, sans-serif;
+  font-family: Raleway, Tahoma, Geneva, sans-serif;
+  font-weight: 100;
   display: grid;
   height: 100vh;
   width: 100vw;
@@ -36,14 +37,17 @@ hr {
   border-color: inherit;
 }
 h1 {
-  font-family: Architects Daughter;
+  font-family: 'Shadows Into Light Two';
+  letter-spacing: 2px;
   font-size: 44px;
   line-height: 1.1em;
 }
 h2 {
-  font-family: Architects Daughter;
+  font-family: 'Shadows Into Light Two';
+  letter-spacing: 2px;
+  font-stretch: expanded;
   font-size: 33px;
-  line-height: 1em;
+  line-height: 1.3em;
   margin-top: -10px;
 }
 h3 {
@@ -57,6 +61,7 @@ p {
 blockquote {
   font-size: 16px;
   line-height: 1.2em;
+  margin: 0px;
 }
 pre {
   font-size: 14px;
@@ -69,24 +74,21 @@ pre {
 }
 
 /* Navigation Headers */
-ul {
-  list-style-type: none;
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
-.nav {
-  float: right
-}
-li a {
-  display: flex;
+.nav-item {
   color: inherit;
   text-align: center;
   padding: 12px;
   padding-bottom: 4px;
   text-decoration: none;
 }
-li a:hover { filter: brightness(81%); }
+.nav-item:hover { filter: brightness(81%); }
 .active { border-bottom: 1px solid; padding-bottom: 3px; }
 
 /*  COLORS  */
@@ -200,6 +202,8 @@ li a:hover { filter: brightness(81%); }
 }
 .carousel-slides {
   flex-grow: 1;
+  margin: 0px;
+  padding: 0px 16px;
 }
 .carousel-slide {
   display: none;

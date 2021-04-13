@@ -1,11 +1,10 @@
 /* eslint-disable line-comment-position */
 /* eslint-disable multiline-comment-style */
 /* eslint-disable max-len */
+import Image from 'next/image';
 import React from 'react';
 
-import { Carousel } from './reusable';
-
-import workout from '../images/workout.png';
+import { Carousel } from '../components/reusable';
 
 const testimonials = [
   'Sierra’s attention to detail and constant striving for perfection [allows teams] to ascend to a higher standard in coding practices, overall quality of work, and team organization.  I believe every team should have someone like her to keep [their company] on the right track.',
@@ -35,7 +34,7 @@ const hobbies = [
   'and Travel - but not right now :)',
 ];
 
-const AboutMe = () => (
+const About = () => (
   <article className="col-12">
     <h2>Who is Sierra?</h2>
     <p>Good question. If you know the answer, please let her know! In the mean time, feel free to explore this page for some clues.</p>
@@ -47,11 +46,11 @@ const AboutMe = () => (
       }))}
     />
     <h3>Hobbies</h3>
-    <blockquote style={{ marginLeft: '0px' }}>{hobbies.join(', ')}</blockquote>
+    <blockquote>{hobbies.join(', ')}</blockquote>
     <aside className="ta-c">
-      <img alt="workout" src={workout} style={{ width: '46vw' }} />
+      <Image priority alt="workout" src="/images/workout.png" width={460} height={360} />
     </aside>
   </article>
 );
 
-export default AboutMe;
+export default About;

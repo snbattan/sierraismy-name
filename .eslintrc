@@ -1,18 +1,21 @@
 {
   "env": {
     "browser": true,
+    "commonjs": true,
     "es6": true,
     "node": true,
     "jest": true
   },
+  "root": true,
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
     "airbnb"
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
@@ -21,17 +24,18 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": [
-    "babel",
-    "react"
-  ],
+  "plugins": [],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "accessor-pairs": "error",
     "array-bracket-spacing": "error",
     "arrow-body-style": "error",
     "arrow-parens": "error",
     "arrow-spacing": "error",
-    "babel/no-invalid-this": "error",
     "block-scoped-var": "error",
     "block-spacing": "error",
     "brace-style": "error",
@@ -99,7 +103,7 @@
     "no-implicit-globals": "error",
     "no-implied-eval": "error",
     "no-import-assign": "error",
-    "no-invalid-this": "off",
+    "no-invalid-this": "warn",
     "no-iterator": "error",
     "no-labels": "error",
     "no-lone-blocks": "error",
@@ -152,7 +156,6 @@
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
     "prefer-destructuring": "error",
-    "prefer-named-capture-group": "error",
     "prefer-numeric-literals": "error",
     "prefer-object-spread": "error",
     "prefer-promise-reject-errors": "error",
@@ -162,11 +165,9 @@
     "prefer-template": "error",
     "quotes": "error",
     "radix": "error",
-    "react/destructuring-assignment": "off",
     "react/jsx-one-expression-per-line": "off",
     "require-atomic-updates": "error",
     "require-await": "error",
-    "require-unicode-regexp": "error",
     "rest-spread-spacing": "error",
     "semi": "error",
     "semi-spacing": "error",

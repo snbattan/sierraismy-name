@@ -1,13 +1,14 @@
 {
   "name": "sierraismy-name",
   "description": "Sierra Battan's website",
-  "version": "1.0.0",
-  "main": "public/index.html",
+  "version": "1.0.1",
+  "main": "pages/index.js",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "next build",
     "deploy": "aws s3 sync build/ s3://sierraismy-name --acl public-read",
-    "start": "parcel public/index.html --port 2222",
-    "lint": "./node_modules/.bin/eslint . --ext .js,.jsx"
+    "dev": "next dev --port 2222",
+    "lint": "eslint . --ext .js,.jsx",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -27,22 +28,21 @@
     "url": "https://github.com/sierraismy-name/website/issues"
   },
   "dependencies": {
-    "parcel": "^2.0.0-nightly.416",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3"
+    "file-loader": "latest",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.3.0",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "babel-eslint": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb": "latest",
+    "eslint-plugin-babel": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "latest"
   },
   "browserslist": {
     "production": [
