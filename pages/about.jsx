@@ -1,7 +1,6 @@
 /* eslint-disable line-comment-position */
 /* eslint-disable multiline-comment-style */
 /* eslint-disable max-len */
-import Image from 'next/image';
 import React from 'react';
 
 import { Carousel } from '../components/reusable';
@@ -48,7 +47,7 @@ const About = () => (
     <h3>Hobbies</h3>
     <blockquote>{hobbies.join(', ')}</blockquote>
     <aside className="ta-c">
-      <Image priority alt="workout" src="/images/workout.png" width={460} height={360} />
+      <img alt="workout illustration" src="/workout.png" width={460} height={360} />
     </aside>
   </article>
 );

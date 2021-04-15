@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import React from 'react';
 
 import Education from '../components/resume/Education';
@@ -18,7 +17,7 @@ const Resume = () => (
         <TechSkills />
         <Experiences />
         <Education />
-        <Image priority alt="work illustration" src="/images/work.png" width={460} height={360} />
+        <img alt="work illustration" src="/work.png" width={460} height={360} />
       </section>
     </article>
   </>

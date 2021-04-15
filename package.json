@@ -4,8 +4,8 @@
   "version": "1.0.1",
   "main": "pages/index.js",
   "scripts": {
-    "build": "next build",
-    "deploy": "aws s3 sync build/ s3://sierraismy-name --acl public-read",
+    "build": "next build && next export",
+    "deploy": "aws s3 sync out/ s3://sierraismy-name --acl public-read",
     "dev": "next dev --port 2222",
     "lint": "eslint . --ext .js,.jsx",
     "start": "next start"
