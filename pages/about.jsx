@@ -36,7 +36,7 @@ const hobbies = [
 const About = () => (
   <article className="col-12">
     <h2>Who is Sierra?</h2>
-    <p>Good question. If you know the answer, please let her know! In the mean time, feel free to explore this page for some clues.</p>
+    <p>Good question. If you know the answer, please let her know! Here are some clues.</p>
     <h3>Testimonials</h3>
     <Carousel
       slides={testimonials.map((quote) => ({
@@ -47,7 +47,7 @@ const About = () => (
     <h3>Hobbies</h3>
     <blockquote>{hobbies.join(', ')}</blockquote>
     <aside className="ta-c">
-      <img alt="workout illustration" src="/workout.png" width={460} height={360} />
+      <img alt="workout illustration" src="/workout.png" style={{ width: '48vw' }} />
     </aside>
   </article>
 );

@@ -8,8 +8,8 @@ const Header = (props) => {
 
   return (
     <header className="book-end">
-      <header className="col-12">
-        <h1 style={{ marginBottom: '-24px', marginTop: '16px' }}>Sierra Battan</h1>
+      <header className="col-12" style={{ marginBottom: '-12px' }}>
+        <h1 style={{ marginBottom: '-24px', marginTop: '12px' }}>Sierra Battan</h1>
         <h3>
           <i
             className={`fa fa-adjust ${flip ? 'left' : 'right'}`}

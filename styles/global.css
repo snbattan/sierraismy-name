@@ -2,13 +2,13 @@
 :root {
   --light-color: rgb(223, 234, 253); /* #DFEAFD */
   --prime-color: rgb(183, 208, 247); /* #b7d0f7 */
-  --vivid-color: rgb(128, 176, 248); /* #80b0f8 */  
+  --vivid-color: rgb(90, 148, 235);
   --shade-color: rgb(51, 89, 145); /* #335991 */
   --white-color: rgb(255, 255, 255);
   --lgray-color: rgb(242, 242, 242);
   --mgray-color: rgb(177, 180, 184);
   --dgray-color: rgb(98, 101, 108);
-  --bgray-color: rgb(53, 54, 58);
+  --bgray-color: rgb(35, 40, 48);
   --black-color: rgb(34, 37, 42); /* #22252A */
   --error-color: rgb(251, 185, 173);
   --third-color: rgb(251, 224, 173);
@@ -25,7 +25,7 @@ html, body, main {
 }
 .book-end {
   grid-column: 1 / 4;
-  padding: 0px 18px;
+  padding: 0px 12px;
 }
 .center {
   grid-column: 1 / 4;
@@ -73,6 +73,22 @@ pre {
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+.button {
+  background-color: inherit;
+  border-radius: 48px;
+  border: 2px solid var(--third-color);
+  color: inherit;
+  display: inline-block;
+  font: inherit;
+  margin: 12px 0px;
+  padding: 6px 12px;
+  outline: none;
+  text-decoration: none;
+}
+.button:hover {
+  filter: brightness(81%);
+}
+
 /* Navigation Headers */
 .nav {
   display: flex;
@@ -85,7 +101,7 @@ pre {
   color: inherit;
   text-align: center;
   padding: 12px;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   text-decoration: none;
 }
 .nav-item:hover { filter: brightness(81%); }
@@ -100,12 +116,12 @@ pre {
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .light {
-  background: var(--white-color) 0%;
+  background: var(--lgray-color);
   color: var(--shade-color);
   border: var(--shade-color);
 }
 .light .book-end {
-  background-color: var(--lgray-color);
+  background-color: var(--white-color);
   color: var(--vivid-color);
   border-color: var(--vivid-color);
 }
@@ -161,16 +177,16 @@ pre {
   padding: 6px 4px;
   width: 20px;
 }
-.fa:hover { filter: brightness(81%); }
+.fa:hover, .fab:hover, .far:hover, .fas:hover { filter: brightness(81%); }
 .fa-adjust {
   margin-left: 0px;
   margin-right: 10px;
   padding: 0px;
   width: auto;
   font-size: 26px;
-  -moz-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -webkit-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 }
 .left {
   transform: scaleX(1);
@@ -203,7 +219,7 @@ pre {
 .carousel-slides {
   flex-grow: 1;
   margin: 0px;
-  padding: 0px 16px;
+  padding: 0px 12px;
 }
 .carousel-slide {
   display: none;
@@ -231,6 +247,36 @@ pre {
 .resume-section-info {
   border-style: solid;
   border-width: 1px;
-  padding: 0px 8px 16px 8px;
-  margin-bottom: 8px;
+  padding: 0px 6px 12px 6px;
+  margin-bottom: 6px;
+}
+
+/* ERROR PAGES */
+.error-code {
+  color: var(--error-color);
+  border-right: 1px solid;
+  display: inline-block;
+  margin: 0;
+  margin-right: 24px;
+  padding: 12px 24px 12px 0px;
+  font-size: 24px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.error-divide {
+  color: var(--error-color);
+  display: inline-block;
+  text-align: left;
+  line-height: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+.error-message {
+  color: var(--error-color);
+  display: inline-block;
+  font-size: 14px;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
 }
