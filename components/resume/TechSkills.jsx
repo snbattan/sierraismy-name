@@ -5,6 +5,7 @@ import { ResumeSection } from '../reusable';
 
 const languages = [
   'JavaScript',
+  'TypeScript',
   'HTML',
   'CSS',
   'NoSQL',
@@ -18,6 +19,7 @@ const tools = [
   'Node',
   'React',
   'Redux',
+  'NextJS',
   'Jenkins',
   'Splunk',
   'PagerDuty',
@@ -26,13 +28,13 @@ const tools = [
   'Confluence',
   'Bitbucket',
   'GitHub',
-  'SignalFX',
-  'NewRelic',
   'Docker',
   'Figma',
   'Sketch',
+  'SignalFX',
+  'NewRelic',
   'React Native',
-  // 'SEO', 'NextJS',
+  'SEO',
   'and more!',
 ];
 

@@ -78,7 +78,7 @@ const Carousel = ({ slides }) => {
     // 9 seconds to view each slide
     }, 9000);
     return () => clearTimeout(timerRef.current);
-  }, [auto, activeIndex]);
+  }, [activeIndex, auto, slides.length]);
 
   return (
     <>
@@ -96,7 +96,7 @@ const Carousel = ({ slides }) => {
         </ul>
         <CarouselArrow isRight onClick={goToNextSlide} />
       </section>
-      <ul className="ta-c">
+      <ul className="ta-c" style={{ padding: '0px' }}>
         {slides.map((slide, index) => (
           <CarouselIndicator
             key={`${slide.id}-indicator`}

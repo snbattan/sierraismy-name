@@ -3,9 +3,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import { Carousel } from './reusable';
-
-import workout from '../images/workout.png';
+import { Carousel } from '../components/reusable';
 
 const testimonials = [
   'Sierra’s attention to detail and constant striving for perfection [allows teams] to ascend to a higher standard in coding practices, overall quality of work, and team organization.  I believe every team should have someone like her to keep [their company] on the right track.',
@@ -35,10 +33,10 @@ const hobbies = [
   'and Travel - but not right now :)',
 ];
 
-const AboutMe = () => (
+const About = () => (
   <article className="col-12">
     <h2>Who is Sierra?</h2>
-    <p>Good question. If you know the answer, please let her know! In the mean time, feel free to explore this page for some clues.</p>
+    <p>Good question. If you know the answer, please let her know! Here are some clues.</p>
     <h3>Testimonials</h3>
     <Carousel
       slides={testimonials.map((quote) => ({
@@ -47,11 +45,11 @@ const AboutMe = () => (
       }))}
     />
     <h3>Hobbies</h3>
-    <blockquote style={{ marginLeft: '0px' }}>{hobbies.join(', ')}</blockquote>
+    <blockquote>{hobbies.join(', ')}</blockquote>
     <aside className="ta-c">
-      <img alt="workout" src={workout} style={{ width: '46vw' }} />
+      <img alt="workout illustration" src="/workout.png" style={{ width: '48vw' }} />
     </aside>
   </article>
 );
 
-export default AboutMe;
+export default About;
