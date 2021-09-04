@@ -2,32 +2,27 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import NavLink from './NavLink';
+import { Switch } from './reusable';
 
-const Header = (props) => {
-  const [flip, toggleFlip] = useState(true);
+const Header = ({ invertTheme }) => {
+  const [flip, toggleFlip] = useState(false);
 
   return (
     <header className="book-end">
-      <header className="col-12" style={{ marginBottom: '-12px' }}>
-        <h1 style={{ marginBottom: '-24px', marginTop: '12px' }}>Sierra Battan</h1>
-        <h3>
-          <i
-            className={`fa fa-adjust ${flip ? 'left' : 'right'}`}
-            label="invert-colors"
-            onClick={() => {
-              toggleFlip(!flip);
-              props.invertTheme();
-            }}
-            onKeyPress={() => {
-              toggleFlip(!flip);
-              props.invertTheme();
-            }}
-            role="button"
-            tabIndex={0}
-          />
-          Software Engineer
-        </h3>
-      </header>
+      <div style={{ display: 'flex', marginTop: '-12px' }}>
+        <div style={{ flexGrow: 1, marginBottom: '-12px', width: '100%' }}>
+          <h1 style={{ marginBottom: '-24px' }}>Sierra Battan</h1>
+          <h3>Software Engineer</h3>
+        </div>
+        <Switch
+          handleToggle={() => {
+            toggleFlip((wasFlipped) => !wasFlipped);
+            invertTheme();
+          }}
+          isOn={flip}
+          style={{ marginTop: '12px' }}
+        />
+      </div>
       <nav className="nav">
         <NavLink href="/"><>HOME</></NavLink>
         <NavLink href="/about"><>ABOUT ME</></NavLink>

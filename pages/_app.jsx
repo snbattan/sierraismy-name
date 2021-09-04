@@ -9,17 +9,16 @@ import '../styles/global.css';
 
 const App = ({ Component, pageProps }) => {
   const [isDarkTheme, setDarkTheme] = useState(true);
-  const invertTheme = () => setDarkTheme(!isDarkTheme);
+  const invertTheme = () => setDarkTheme((wasDarkTheme) => !wasDarkTheme);
 
   return (
     <>
       <Head>
-        <link href="s.png" rel="shortcut icon" />
-        <link href="s.png" rel="icon" />
-        <link href="s.png" rel="apple-touch-icon" />
+        <link href="s-icon.svg" rel="shortcut icon" />
+        <link href="s-icon.svg" rel="icon" />
+        <link href="s-icon.svg" rel="apple-touch-icon" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Shadows Into Light Two" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Shadows Into Light Two&family=Montserrat:wght@100" rel="stylesheet" />
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Sierra Battan's personal website" name="description" />
@@ -30,6 +29,9 @@ const App = ({ Component, pageProps }) => {
         <meta property="og:title" content="Sierra Battan" />
         <meta property="og:description" content="Sierra Battan" />
         <meta property="og:site_name" content="Personal Website" />
+        <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg" />
+        <meta property="og:url" content="http://euro-travel-example.com/index.htm" />
+        <meta property="og:image" content="/s-icon.svg" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:creator" content="@sierrabattan" />
         <meta property="twitter:title" content="Sierra Battan" />

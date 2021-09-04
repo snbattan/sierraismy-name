@@ -17,7 +17,7 @@ const Resume = () => (
         <TechSkills />
         <Experiences />
         <Education />
-        <img alt="work illustration" src="/work.png" style={{ width: '48vw' }} />
+        <img alt="work illustration" src="/work.png" style={{ maxWidth: '480px', width: '48vw' }} />
       </section>
     </article>
   </>

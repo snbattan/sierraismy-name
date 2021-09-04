@@ -14,7 +14,8 @@
   --third-color: rgb(251, 224, 173);
 }
 html, body, main {
-  font-family: Raleway, Tahoma, Geneva, sans-serif;
+  font-family: -apple-system, 'Montserrat', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 100;
   display: grid;
   height: 100vh;
@@ -43,9 +44,6 @@ h1 {
   line-height: 1.1em;
 }
 h2 {
-  font-family: 'Shadows Into Light Two';
-  letter-spacing: 2px;
-  font-stretch: expanded;
   font-size: 33px;
   line-height: 1.3em;
   margin-top: -10px;
@@ -100,8 +98,8 @@ pre {
 .nav-item {
   color: inherit;
   text-align: center;
-  padding: 12px;
-  padding-bottom: 6px;
+  margin-left: 12px;
+  padding-bottom: 4px;
   text-decoration: none;
 }
 .nav-item:hover { filter: brightness(81%); }
@@ -116,12 +114,12 @@ pre {
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .light {
-  background: var(--lgray-color);
+  background: var(--white-color);
   color: var(--shade-color);
   border: var(--shade-color);
 }
 .light .book-end {
-  background-color: var(--white-color);
+  background: var(--lgray-color);
   color: var(--vivid-color);
   border-color: var(--vivid-color);
 }
@@ -131,7 +129,7 @@ pre {
   border: var(--prime-color);
 }
 .dark .book-end {
-  background-color: var(--black-color);
+  background: var(--black-color);
   color: var(--vivid-color);
   border: var(--vivid-color);
 }
@@ -178,16 +176,6 @@ pre {
   width: 20px;
 }
 .fa:hover, .fab:hover, .far:hover, .fas:hover { filter: brightness(81%); }
-.fa-adjust {
-  margin-left: 0px;
-  margin-right: 10px;
-  padding: 0px;
-  width: auto;
-  font-size: 26px;
-  -moz-transition: transform 0.3s ease-out;
-  -webkit-transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-}
 .left {
   transform: scaleX(1);
 }
@@ -279,4 +267,84 @@ pre {
   margin: 0;
   padding: 0;
   vertical-align: middle;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    color: var(--blue-color);
+    background-color: var(--black-color);
+  }
+  footer {
+    border-top: 1px solid var(--pink-color);
+  }
+  .react-switch-label {
+    border: 1px solid var(--pink-color);
+    background: var(--dark-color);
+  }
+  .react-switch-label .react-switch-button {
+    border: 1px solid var(--pink-color);
+    background: var(--navy-color);
+  }
+  .react-switch-checkbox:checked + .react-switch-label {
+    background: var(--pink-color);
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    color: var(--black-color);
+    background-color: var(--white-color);
+  }
+  footer {
+    border-top: 1px solid var(--black-color);
+  }
+  .react-switch-label {
+    border: 1px solid var(--black-color);
+    background: var(--pink-color);
+  }
+  .react-switch-label .react-switch-button {
+    border: 1px solid var(--black-color);
+    background: var(--white-color);
+  }
+  .react-switch-checkbox:checked + .react-switch-label {
+    background: var(--black-color);
+  }
+}*/
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 50px;
+  height: 24px;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color .2s;
+  border: 1px solid var(--light-color);
+  background: var(--shade-color);
+}
+.react-switch-label .react-switch-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 45px;
+  transition: 0.2s;
+  border: 1px solid var(--light-color);
+  background: var(--shade-color);
+}
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+.react-switch-checkbox:checked + .react-switch-label {
+  background: var(--prime-color);
+}
+.react-switch-label:active .react-switch-button {
+  width: 28px;
 }

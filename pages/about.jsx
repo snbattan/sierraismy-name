@@ -47,7 +47,7 @@ const About = () => (
     <h3>Hobbies</h3>
     <blockquote>{hobbies.join(', ')}</blockquote>
     <aside className="ta-c">
-      <img alt="workout illustration" src="/workout.png" style={{ width: '48vw' }} />
+      <img alt="workout illustration" src="/workout.png" style={{ maxWidth: '480px', width: '48vw' }} />
     </aside>
   </article>
 );
