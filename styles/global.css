@@ -1,68 +1,27 @@
-/* BASIC */
-:root {
-  --light-color: rgb(223, 234, 253); /* #DFEAFD */
-  --prime-color: rgb(183, 208, 247); /* #b7d0f7 */
-  --vivid-color: rgb(90, 148, 235);
-  --shade-color: rgb(51, 89, 145); /* #335991 */
-  --white-color: rgb(255, 255, 255);
-  --lgray-color: rgb(242, 242, 242);
-  --mgray-color: rgb(177, 180, 184);
-  --dgray-color: rgb(98, 101, 108);
-  --bgray-color: rgb(35, 40, 48);
-  --black-color: rgb(34, 37, 42); /* #22252A */
-  --error-color: rgb(251, 185, 173);
-  --third-color: rgb(251, 224, 173);
-}
+/* defaults */
 html, body, main {
   font-family: -apple-system, 'Montserrat', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: 100;
-  display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template: auto 1fr auto / auto 1fr auto;
   margin: 0;
-  padding: 0;
+  padding: 0;display: flex
 }
-.book-end {
-  grid-column: 1 / 4;
-  padding: 0px 12px;
-}
-.center {
-  grid-column: 1 / 4;
-  overflow-y: auto;
-  padding: 2em;
-}
-hr {
-  border: 1px solid;
-  border-color: inherit;
-}
+main { padding: 48px 24px; width: auto; }
+header { padding: 24px; }
+hr { border: 1px solid; border-color: inherit; }
 h1 {
-  font-family: 'Shadows Into Light Two';
-  letter-spacing: 2px;
-  font-size: 44px;
-  line-height: 1.1em;
-}
-h2 {
-  font-size: 33px;
-  line-height: 1.3em;
-  margin-top: -10px;
-}
-h3 {
-  font-size: 26px;
-  line-height: 1em;
-}
-p {
-  font-size: 18px;
+  font-family: 'Shadows Into Light Two', cursive;
+  letter-spacing: 0.12em;
   line-height: 1.2em;
+  font-size: 48px;
 }
-blockquote {
-  font-size: 16px;
-  line-height: 1.2em;
-  margin: 0px;
-}
+h2 { font-size: 36px; line-height: 1.2em; }
+h3 { font-size: 30px; line-height: 1.2em; }
+p { font-size: 18px; line-height: 1.2em; }
+blockquote { font-size: 12px; line-height: 1.2em; }
 pre {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.2em;
   white-space: pre-wrap;       /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -71,280 +30,61 @@ pre {
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-.button {
-  background-color: inherit;
-  border-radius: 48px;
-  border: 2px solid var(--third-color);
-  color: inherit;
-  display: inline-block;
-  font: inherit;
-  margin: 12px 0px;
-  padding: 6px 12px;
-  outline: none;
-  text-decoration: none;
+/* colors */
+:root {
+  --white-color: rgb(232, 241, 255);
+  --black-color: rgb(34, 37, 42); /* #22252A */
+  --lblue-color: rgb(183, 208, 247); /* #b7d0f7 */
+  --mblue-color: rgb(135, 178, 241);
+  --dblue-color: rgb(90, 147, 233);
+  --lnavy-color: rgb(64, 104, 163);
+  --mnavy-color: rgb(51, 89, 145); /* #335991 */
+  --dnavy-color: rgb(29, 59, 104);
+  --lpink-color: rgb(254, 222, 242);
+  --mpink-color: rgb(231, 184, 204);
+  --dpink-color: rgb(209, 133, 166);
+  --lgold-color: rgb(243, 240, 229);
+  --mgold-color: rgb(240, 230, 193);
+  --dgold-color: rgb(245, 220, 132);
 }
-.button:hover {
-  filter: brightness(81%);
-}
+/* backgrounds */
+.bg-white { background: var(--white-color); }
+.bg-black { background: var(--black-color); }
+.bg-mblue { background: var(--mblue-color); }
+.bg-lblue { background: var(--lblue-color); }
+.bg-dblue { background: var(--dblue-color); }
+.bg-lnavy { background: var(--lnavy-color); }
+.bg-mnavy { background: var(--mnavy-color); }
+.bg-dnavy { background: var(--dnavy-color); }
+.bg-lpink { background: var(--lpink-color); }
+.bg-mpink { background: var(--mpink-color); }
+.bg-dpink { background: var(--dpink-color); }
+.bg-lgold { background: var(--lgold-color); }
+.bg-mgold { background: var(--mgold-color); }
+.bg-dgold { background: var(--dgold-color); }
+/* text colors */
+.tc-white { color: var(--white-color); }
+.tc-black { color: var(--black-color); }
+.tc-mblue { color: var(--mblue-color); }
+.tc-lblue { color: var(--lblue-color); }
+.tc-dblue { color: var(--dblue-color); }
+.tc-lnavy { color: var(--lnavy-color); }
+.tc-mnavy { color: var(--mnavy-color); }
+.tc-dnavy { color: var(--dnavy-color); }
+.tc-lpink { color: var(--lpink-color); }
+.tc-mpink { color: var(--mpink-color); }
+.tc-dpink { color: var(--dpink-color); }
+.tc-lgold { color: var(--lgold-color); }
+.tc-mgold { color: var(--mgold-color); }
+.tc-dgold { color: var(--dgold-color); }
 
-/* Navigation Headers */
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-}
+/* formatting */
+.card { margin: 6px; padding: 12px; width: 27%; }
+.nav { display: 'flex'; flex-direction: 'row'; }
 .nav-item {
   color: inherit;
-  text-align: center;
-  margin-left: 12px;
-  padding-bottom: 4px;
+  text-transform: uppercase;
   text-decoration: none;
 }
-.nav-item:hover { filter: brightness(81%); }
-.active { border-bottom: 1px solid; padding-bottom: 3px; }
-
-/*  COLORS  */
-.light, .dark {
-  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
-  -ms-transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
-}
-.light {
-  background: var(--white-color);
-  color: var(--shade-color);
-  border: var(--shade-color);
-}
-.light .book-end {
-  background: var(--lgray-color);
-  color: var(--vivid-color);
-  border-color: var(--vivid-color);
-}
-.dark {
-  background: var(--bgray-color);
-  color: var(--prime-color);
-  border: var(--prime-color);
-}
-.dark .book-end {
-  background: var(--black-color);
-  color: var(--vivid-color);
-  border: var(--vivid-color);
-}
-
-/*  SPACING  */
-[class*="col-"] {
-  width: 100%;
-}
-@media only screen and (min-width: 600px) {
-  /* For Desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-
-.ta-l {
-  text-align: left;
-}
-.ta-c {
-  text-align: center;
-}
-.ta-r {
-  text-align: right;
-}
-
-/* SOCIAL MEDIA ICONS */
-.fa, .fab, .far, .fas {
-  border-radius: 50%;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  margin: 3px;
-  outline: none;
-  padding: 6px 4px;
-  width: 20px;
-}
-.fa:hover, .fab:hover, .far:hover, .fas:hover { filter: brightness(81%); }
-.left {
-  transform: scaleX(1);
-}
-.right {
-  transform: scaleX(-1);
-}
-.fa-facebook-f { background: #3B5998; color: white; }
-.fa-twitter { background: #55ACEE; color: white; }
-.fa-linkedin-in { background: #007bb5; color: white; }
-.fa-github { background: #6e5494; color: white; }
-.fa-youtube { background: #bb0000; color: white; }
-.fa-instagram { background: rgb(222, 55, 94); color: white; }
-.fa-pinterest-p { background: #cb2027; color: white; }
-.fa-xs { padding: 0px; }
-.fa-chevron-circle-up { margin-bottom: 10px; }
-
-/* CAROUSEL */
-.carousel {
-  width: 100%;
-  min-height: 200px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin-bottom: 22px;
-}
-.carousel-slides {
-  flex-grow: 1;
-  margin: 0px;
-  padding: 0px 12px;
-}
-.carousel-slide {
-  display: none;
-  font-size: 14px;
-}
-.visible {
-  display: inline;
-}
-
-.flx-break {
-  flex-basis: 100%;
-  width: 0;
-  height: 0;
-}
-
-/* RESUME */
-.resume-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-.resume-section-info {
-  border-style: solid;
-  border-width: 1px;
-  padding: 0px 6px 12px 6px;
-  margin-bottom: 6px;
-}
-
-/* ERROR PAGES */
-.error-code {
-  color: var(--error-color);
-  border-right: 1px solid;
-  display: inline-block;
-  margin: 0;
-  margin-right: 24px;
-  padding: 12px 24px 12px 0px;
-  font-size: 24px;
-  font-weight: 500;
-  vertical-align: middle;
-}
-.error-divide {
-  color: var(--error-color);
-  display: inline-block;
-  text-align: left;
-  line-height: 48px;
-  height: 48px;
-  vertical-align: middle;
-}
-.error-message {
-  color: var(--error-color);
-  display: inline-block;
-  font-size: 14px;
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
-  vertical-align: middle;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  body {
-    color: var(--blue-color);
-    background-color: var(--black-color);
-  }
-  footer {
-    border-top: 1px solid var(--pink-color);
-  }
-  .react-switch-label {
-    border: 1px solid var(--pink-color);
-    background: var(--dark-color);
-  }
-  .react-switch-label .react-switch-button {
-    border: 1px solid var(--pink-color);
-    background: var(--navy-color);
-  }
-  .react-switch-checkbox:checked + .react-switch-label {
-    background: var(--pink-color);
-  }
-}
-@media (prefers-color-scheme: light) {
-  body {
-    color: var(--black-color);
-    background-color: var(--white-color);
-  }
-  footer {
-    border-top: 1px solid var(--black-color);
-  }
-  .react-switch-label {
-    border: 1px solid var(--black-color);
-    background: var(--pink-color);
-  }
-  .react-switch-label .react-switch-button {
-    border: 1px solid var(--black-color);
-    background: var(--white-color);
-  }
-  .react-switch-checkbox:checked + .react-switch-label {
-    background: var(--black-color);
-  }
-}*/
-.react-switch-checkbox {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-.react-switch-label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  width: 50px;
-  height: 24px;
-  border-radius: 100px;
-  position: relative;
-  transition: background-color .2s;
-  border: 1px solid var(--light-color);
-  background: var(--shade-color);
-}
-.react-switch-label .react-switch-button {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 18px;
-  height: 18px;
-  border-radius: 45px;
-  transition: 0.2s;
-  border: 1px solid var(--light-color);
-  background: var(--shade-color);
-}
-.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
-  left: calc(100% - 1px);
-  transform: translateX(-100%);
-}
-.react-switch-checkbox:checked + .react-switch-label {
-  background: var(--prime-color);
-}
-.react-switch-label:active .react-switch-button {
-  width: 28px;
-}
+.nav-item:hover { filter: brightness(90%); }
+.active { color: var(--dnavy-color); }
