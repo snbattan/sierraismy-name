@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const Error = ({ statusCode }) => (
+const Error = ({ statusCode = 404 }: { statusCode: number }) => (
   <article className="col-12 ta-c">
     <h1 className="error-code">{statusCode}</h1>
     <div aria-hidden className="error-divide" />
@@ -13,17 +12,11 @@ const Error = ({ statusCode }) => (
   </article>
 );
 
-Error.getInitialProps = ({ res, err }) => {
+Error.getInitialProps = (
+  { res, err }: { res: { statusCode: number }, err: { statusCode: number } },
+) => {
   const statusCode = res?.statusCode || err?.statusCode;
   return { statusCode };
-};
-
-Error.defaultProps = {
-  statusCode: 404,
-};
-
-Error.propTypes = {
-  statusCode: PropTypes.number,
 };
 
 export default Error;

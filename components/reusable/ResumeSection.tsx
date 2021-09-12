@@ -1,7 +1,16 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const Information = ({ isChronological, i, info }) => (
+const Information = ({ i, info, isChronological }: {
+  i: number,
+  info: {
+    icon?: JSX.Element,
+    id: string,
+    other: Array<string>,
+    subtitles?: Array<string>,
+    title: string,
+  },
+  isChronological?: boolean,
+}) => (
   <>
     {isChronological && i !== 0 && <i className="fas fa-2x fa-chevron-circle-up" />}
     <section className="resume-section-info col-8">
@@ -17,13 +26,17 @@ Information.defaultProps = {
   isChronological: false,
 };
 
-Information.propTypes = {
-  i: PropTypes.number.isRequired,
-  info: PropTypes.shape().isRequired,
-  isChronological: PropTypes.bool,
-};
-
-const ResumeSection = ({ information, isChronological, title }) => (
+const ResumeSection = ({ information, isChronological, title }: {
+  information: Array<{
+    icon?: JSX.Element,
+    id: string,
+    other: Array<string>,
+    subtitles?: Array<string>,
+    title: string,
+  }>,
+  isChronological?: boolean,
+  title: string,
+}) => (
   <article className="resume-section">
     <h3>{title}</h3>
     {information.map((info, i) => (
@@ -39,12 +52,6 @@ const ResumeSection = ({ information, isChronological, title }) => (
 
 ResumeSection.defaultProps = {
   isChronological: false,
-};
-
-ResumeSection.propTypes = {
-  information: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  isChronological: PropTypes.bool,
-  title: PropTypes.string.isRequired,
 };
 
 export default ResumeSection;

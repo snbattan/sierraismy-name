@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const NavLink = ({ children, href }) => {
+const NavLink = ({ children, href }: {
+  children: JSX.Element,
+  href: string
+}) => {
   const router = useRouter();
 
   return (
@@ -11,12 +13,6 @@ const NavLink = ({ children, href }) => {
       <a className={`nav-item${router.pathname === href ? ' active' : ''}`} href={href}>{children}</a>
     </Link>
   );
-};
-
-NavLink.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  children: PropTypes.any.isRequired,
-  href: PropTypes.string.isRequired,
 };
 
 export default NavLink;

@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const Switch = ({
-  handleToggle,
-  isOn,
-  style,
+const Switch = ({ handleToggle, isOn, style }: {
+  handleToggle: () => void,
+  isOn?: boolean,
+  style?: object,
 }) => (
   <div style={{
     alignItems: 'flex-end',
@@ -34,13 +33,8 @@ const Switch = ({
 );
 
 Switch.defaultProps = {
+  isOn: false,
   style: {},
-};
-
-Switch.propTypes = {
-  handleToggle: PropTypes.func.isRequired,
-  isOn: PropTypes.bool.isRequired,
-  style: PropTypes.shape,
 };
 
 export default Switch;

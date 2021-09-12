@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import NavLink from './NavLink';
 import { Switch } from './reusable';
 
-const Header = ({ invertTheme }) => {
+const Header = ({ invertTheme }: { invertTheme: () => void }) => {
   const [flip, toggleFlip] = useState(false);
 
   return (
@@ -30,10 +29,6 @@ const Header = ({ invertTheme }) => {
       </nav>
     </header>
   );
-};
-
-Header.propTypes = {
-  invertTheme: PropTypes.func.isRequired,
 };
 
 export default Header;

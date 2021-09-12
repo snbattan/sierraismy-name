@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 const socialIcons = [
@@ -6,23 +5,16 @@ const socialIcons = [
   { link: 'https://twitter.com/sierrabattan', name: 'twitter' },
   { link: 'https://www.linkedin.com/in/snbattan/', name: 'linkedin-in' },
   { link: 'https://github.com/snbattan', name: 'github' },
-  // { link: 'https://www.youtube.com/channel/UCwqywRwVXJpNAL4Zbck245Q', name: 'youtube' },
+  { link: 'https://www.youtube.com/channel/UCwqywRwVXJpNAL4Zbck245Q', name: 'youtube' },
   { link: 'https://www.instagram.com/sierrabattan/', name: 'instagram' },
   { link: 'https://www.pinterest.com/snbattan/_saved/', name: 'pinterest-p' },
 ];
 
-const SocialIcon = ({ social }) => (
-  <a href={social.link} rel="noopener noreferrer" label={social.name} target="_blank">
+const SocialIcon = ({ social }: { social: { link: string, name: string } }) => (
+  <a aria-label={social.name} href={social.link} rel="noopener noreferrer" target="_blank">
     <i className={`fab fa-${social.name}`} />
   </a>
 );
-
-SocialIcon.propTypes = {
-  social: PropTypes.shape({
-    link: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 const Footer = () => (
   <footer className="book-end ta-c">

@@ -1,10 +1,12 @@
-import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 
-const CarouselArrow = ({ isRight, onClick }) => (
+const CarouselArrow = ({ isRight, onClick }: {
+  isRight?: boolean,
+  onClick: () => void,
+}) => (
   <i
+    aria-label="arrow-right"
     className={`fas fa-2x fa-angle-${isRight ? 'right' : 'left'}`}
-    label="arrow-right"
     onClick={onClick}
     onKeyPress={onClick}
     role="button"
@@ -16,16 +18,14 @@ CarouselArrow.defaultProps = {
   isRight: false,
 };
 
-CarouselArrow.propTypes = {
-  isRight: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
-};
-
-const CarouselIndicator = ({ activeIndex, index, onClick }) => (
+const CarouselIndicator = ({ activeIndex, index, onClick }: {
+  activeIndex: number
+  index: number,
+  onClick: () => void,
+}) => (
   <i
     aria-hidden="true"
     className={`fa-xs fa-circle ${index === activeIndex ? 'fas' : 'far'}`}
-    label="indicator"
     onClick={onClick}
     onKeyPress={onClick}
     role="button"
@@ -33,40 +33,32 @@ const CarouselIndicator = ({ activeIndex, index, onClick }) => (
   />
 );
 
-CarouselIndicator.propTypes = {
-  activeIndex: PropTypes.number.isRequired,
-  index: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
-};
-
-const CarouselSlide = ({ activeIndex, index, slide }) => (
+const CarouselSlide = ({ activeIndex, index, slide }: {
+  activeIndex: number
+  index: number,
+  slide: JSX.Element,
+}) => (
   <li className={`carousel-slide ${index === activeIndex && 'visible'}`}>
     {slide}
   </li>
 );
 
-CarouselSlide.propTypes = {
-  activeIndex: PropTypes.number.isRequired,
-  index: PropTypes.number.isRequired,
-  slide: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
-};
-
-const Carousel = ({ slides }) => {
+const Carousel = ({ slides }: {
+  slides: Array<{ id: string, value: JSX.Element }>
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [auto, setAuto] = useState(true);
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setAuto(false);
     setActiveIndex(index);
   };
 
   // add length since % is remainder, not the true mod
   const goToPrevSlide = () => goToSlide((activeIndex - 1 + slides.length) % slides.length);
-
   const goToNextSlide = () => goToSlide((activeIndex + 1) % slides.length);
 
   const timerRef = useRef(null);
-
   useEffect(() => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
@@ -75,7 +67,7 @@ const Carousel = ({ slides }) => {
       if (auto) {
         setActiveIndex((activeIndex + 1) % slides.length);
       }
-    // 9 seconds to view each slide
+      // 9 seconds to view each slide
     }, 9000);
     return () => clearTimeout(timerRef.current);
   }, [activeIndex, auto, slides.length]);
@@ -108,13 +100,6 @@ const Carousel = ({ slides }) => {
       </ul>
     </>
   );
-};
-
-Carousel.propTypes = {
-  slides: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    value: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
-  })).isRequired,
 };
 
 export default Carousel;

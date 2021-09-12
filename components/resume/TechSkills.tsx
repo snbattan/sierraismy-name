@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import React from 'react';
 
 import { ResumeSection } from '../reusable';
@@ -38,35 +37,31 @@ const tools = [
   'and more!',
 ];
 
-/*
- * const methodologies = [
- *   'Agile',
- *   'Scrum',
- *   'Kanban',
- *   'CI/CD',
- *   'DevOps',
- *   'Lean',
- *   'KT',
- *   'TDD',
- *   'OOP',
- *   'Functional Programming',
- *   'Product Management',
- * ];
- */
+const methodologies = [
+  'Agile',
+  'Scrum',
+  'Kanban',
+  'CI/CD',
+  'DevOps',
+  'Lean',
+  'KT',
+  'TDD',
+  'OOP',
+  'Functional Programming',
+  'Product Management',
+];
 
 const techSkills = [
   { id: 'languages', other: languages, title: 'Languages' },
   { id: 'tools', other: tools, title: 'Tools' },
-  // { id: 'methodologies', other: methodologies, title: 'Methodologies' },
+  { id: 'methodologies', other: methodologies, title: 'Methodologies' },
 ];
 
 const TechSkills = () => (
-  <>
-    <ResumeSection
-      information={techSkills}
-      title="TECHNICAL SKILLS"
-    />
-  </>
+  <ResumeSection
+    information={techSkills}
+    title="TECHNICAL SKILLS"
+  />
 );
 
 export default TechSkills;
