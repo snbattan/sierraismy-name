@@ -23,11 +23,11 @@ const App = ({ Component, pageProps }) => {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Sierra Battan's personal website" name="description" />
         <meta content="#80b0f8" name="theme-color" />
-        <meta name="keywords" content="Sierra Battan, Software Engineer, Personal Website" />
+        <meta name="keywords" content="Sierra Battan, Software Engineer Personal Website, Full-Stack Software Engineer" />
         <meta name="author" content="Sierra Battan" />
         <meta property="og:type" content="website" />
         <meta name="title" property="og:title" content="Sierra Battan" />
-        <meta name="description" property="og:description" content="Sierra Battan's personal website. Visit to view her journey as a Software Engineer." />
+        <meta name="description" property="og:description" content="Sierra Battan's personal website. Visit to view her journey as a full-stack, cloud platform Software Engineer." />
         <meta property="og:site_name" content="Personal Website" />
         <meta name="image" property="og:image" content="https://sierraismy.name/s-icon.svg" />
         <meta property="og:url" content="https://sierraismy.name" />
@@ -36,7 +36,7 @@ const App = ({ Component, pageProps }) => {
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:creator" content="@sierrabattan" />
         <meta property="twitter:title" content="Sierra Battan" />
-        <meta property="twitter:description" content="Sierra Battan's personal website" />
+        <meta property="twitter:description" content="Sierra Battan's personal website. Visit to view her journey as a full-stack, cloud platform Software Engineer." />
         <title>Sierra Battan</title>
         <link rel="canonical" href="https://sierraismy.name" />
       </Head>
