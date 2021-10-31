@@ -9,9 +9,9 @@ const Header = () => (
       <h2>Software Engineer</h2>
     </div>
     <nav className="nav">
-      <NavLink href="/"><>HOME</></NavLink>
-      <NavLink href="/about"><>ABOUT</></NavLink>
-      <NavLink href="/resume"><>RESUME</></NavLink>
+      <NavLink href="/">Home </NavLink>
+      <NavLink href="/about">About Me </NavLink>
+      <NavLink href="/resume">Resume </NavLink>
     </nav>
   </header>
 );

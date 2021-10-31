@@ -6,15 +6,9 @@ Sitemap({
   baseUrl: 'https://sierraismy.name',
   nextConfigPath: `${__dirname}/next.config.js`,
   pagesConfig: {
-    '/': {
-      lastmod,
-    },
-    '/about': {
-      lastmod,
-    },
-    '/resume': {
-      lastmod,
-    },
+    '/': { lastmod },
+    '/about': { lastmod },
+    '/resume': { lastmod },
   },
   pagesDirectory: `${__dirname}/pages`,
   sitemapFilename: 'sitemap.xml',

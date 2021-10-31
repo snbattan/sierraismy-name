@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 
 const NavLink = ({ children, href }: {
-  children: JSX.Element,
+  children: string,
   href: string
 }) => {
   const router = useRouter();

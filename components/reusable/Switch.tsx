@@ -5,30 +5,24 @@ const Switch = ({ handleToggle, isOn, style }: {
   isOn?: boolean,
   style?: object,
 }) => (
-  <div style={{
-    alignItems: 'flex-end',
-    display: 'flex',
-    flexDirection: 'column',
-    flexGrow: 0,
-    width: '100%',
-  }}
+  <div
+    aria-label="light-dark-mode-switch"
+    style={style}
   >
-    <div style={style}>
-      <input
-        checked={isOn}
-        onChange={handleToggle}
-        className="react-switch-checkbox"
-        id="react-switch-new"
-        type="checkbox"
-      />
-      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label
-        className="react-switch-label"
-        htmlFor="react-switch-new"
-      >
-        <span className="react-switch-button" />
-      </label>
-    </div>
+    <input
+      checked={isOn}
+      onChange={handleToggle}
+      className="react-switch-checkbox"
+      id="react-switch-new"
+      type="checkbox"
+    />
+    {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+    <label
+      className="react-switch-label"
+      htmlFor="react-switch-new"
+    >
+      <span className="react-switch-button" />
+    </label>
   </div>
 );
 

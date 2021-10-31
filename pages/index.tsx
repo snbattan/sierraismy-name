@@ -1,16 +1,13 @@
 import React from 'react';
 
-import { Button } from '../components/reusable';
-
 const colors = ['bg-lblue', 'bg-mblue', 'bg-dblue', 'bg-lnavy', 'bg-mnavy', 'bg-dnavy', 'bg-lpink', 'bg-mpink', 'bg-dpink', 'bg-lgold', 'bg-mgold', 'bg-dgold', 'bg-white', 'bg-black'];
 
 const Home = () => (
   <article className="col-12">
     <h3>Welcome!</h3>
     <p>This is Sierra&apos;s website.</p>
-    <pre>Please explore and reach out to her if you have any questions. Please explore and reach out to her if you have any questions. Please explore and reach out to her if you have any questions.</pre>
+    <pre>Please explore and reach out to her if you have any questions.</pre>
     <blockquote>Get in Touch</blockquote>
-    {/* <Button isEmail label="Get in Touch" /> */}
     <section style={{ display: 'flex', flexWrap: 'wrap', marginTop: '48px' }}>
       {colors.map((c) => <div key={c} className={`card ${c}`}>{c}</div>)}
     </section>

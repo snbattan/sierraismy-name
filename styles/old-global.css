@@ -113,19 +113,33 @@ html, body {
 .fa-instagram { background: rgb(222, 55, 94); color: white; }
 .fa-pinterest-p { background: #cb2027; color: white; }
 .fa-xs { padding: 0px; }
-.fa-chevron-circle-up { margin-bottom: 10px; }
+.fa-circle { margin-bottom: 24px; }
+.fa-chevron-circle-up { cursor: auto; margin: 0px 0px 10px -10px; }
+.fa-chevron-circle-up:hover { filter: brightness(100%); }
 
 /* CAROUSEL */
 .carousel {
   width: 100%;
-  min-height: 200px;
+  min-height: 310px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-bottom: 22px;
+  margin: 0px;
+}
+@media only screen and (min-width: 400px) {
+  .carousel { min-height: 260px; }
+}
+@media only screen and (min-width: 600px) {
+  .carousel { min-height: 140px; }
+}
+@media only screen and (min-width: 800px) {
+  .carousel { min-height: 100px; }
+}
+@media only screen and (min-width: 1000px) {
+  .carousel { min-height: 80px; }
 }
 .carousel-slides {
   flex-grow: 1;
@@ -158,13 +172,13 @@ html, body {
 .resume-section-info {
   border-style: solid;
   border-width: 1px;
-  padding: 0px 6px 12px 6px;
+  padding: 0px 18px 18px 18px;
   margin-bottom: 6px;
 }
 
 /* ERROR PAGES */
 .error-code {
-  color: var(--error-color);
+  color: var(--mgold-color);
   border-right: 1px solid;
   display: inline-block;
   margin: 0;
@@ -175,7 +189,7 @@ html, body {
   vertical-align: middle;
 }
 .error-divide {
-  color: var(--error-color);
+  color: var(--mgold-color);
   display: inline-block;
   text-align: left;
   line-height: 48px;
@@ -183,7 +197,7 @@ html, body {
   vertical-align: middle;
 }
 .error-message {
-  color: var(--error-color);
+  color: var(--mgold-color);
   display: inline-block;
   font-size: 14px;
   line-height: inherit;
@@ -249,8 +263,8 @@ html, body {
   border-radius: 100px;
   position: relative;
   transition: background-color .2s;
-  border: 1px solid var(--mblue-color);
-  background: var(--mnavy-color);
+  border: 1px solid var(--lblue-color);
+  background: var(--mblue-color);
 }
 .react-switch-label .react-switch-button {
   position: absolute;
@@ -260,15 +274,15 @@ html, body {
   height: 18px;
   border-radius: 45px;
   transition: 0.2s;
-  border: 1px solid var(--mblue-color);
-  background: var(--mnavy-color);
+  border: 1px solid var(--lblue-color);
+  background: var(--mblue-color);
 }
 .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
   left: calc(100% - 1px);
   transform: translateX(-100%);
 }
 .react-switch-checkbox:checked + .react-switch-label {
-  background: var(--lblue-color);
+  background: var(--dblue-color);
 }
 .react-switch-label:active .react-switch-button {
   width: 28px;

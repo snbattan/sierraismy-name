@@ -1,7 +1,7 @@
 {
   "name": "sierraismy-name",
   "description": "Sierra's website",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "pages/index.js",
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,8 @@
     "start": "next start",
     "deploy": "yarn deploy-short && yarn deploy-long",
     "deploy-short": "aws s3 sync out/ s3://sierraismy-name --acl public-read",
-    "deploy-long": "find ./out -type f -name '*.html' | while read HTMLFILE; do BASENAME=${HTMLFILE##*/}; FILENAME=${BASENAME%.*}; if [[ '$FILENAME' != 'index' ]]; then aws s3 cp s3://sierraismy-name/${BASENAME} s3://sierraismy-name/${FILENAME}; fi done"
+    "deploy-long": "find ./out -type f -name '*.html' | while read HTMLFILE; do BASENAME=${HTMLFILE##*/}; FILENAME=${BASENAME%.*}; if [[ '$FILENAME' != 'index' ]]; then aws s3 cp s3://sierraismy-name/${BASENAME} s3://sierraismy-name/${FILENAME}; fi done",
+    "sitemap": "node ./sitemap-generator.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,7 @@
     "url": "https://github.com/sierraismy-name/website/issues"
   },
   "dependencies": {
-    "next": "^11.1.2",
+    "next": "^12.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

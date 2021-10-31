@@ -1,7 +1,8 @@
 /* defaults */
 html, body, main {
-  font-family: -apple-system, 'Montserrat', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, -apple-system;
+  font-weight: 200;
   height: 100vh;
   width: 100vw;
   margin: 0;
