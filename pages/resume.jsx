@@ -9,6 +9,7 @@ const Resume = () => (
   <>
     <Head>
       <title>Sierra&apos;s Resume</title>
+      <link rel="canonical" href="https://sierraismy.name/resume" />
     </Head>
     <article className="col-12">
       <h2>What does Sierra do?</h2>

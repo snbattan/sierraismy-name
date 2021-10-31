@@ -3,61 +3,70 @@ import React from 'react';
 
 import { ResumeSection } from '../reusable';
 
-const languages = [
+const technologies = [
+  'AWS',
   'JavaScript',
-  'TypeScript',
+  'React',
+  'Redux',
+  'Next.js',
+  'Node.js',
   'HTML',
   'CSS',
+  'Webpack',
+  'Parcel',
+  'Babel',
+  'ESLint',
+  'Jest',
+  'Git',
+  'Docker',
   'NoSQL',
   'SQL',
+  'TypeScript',
+  'React Native',
   'Java',
-  'and Python.',
+  'and Python',
 ];
 
 const tools = [
-  'AWS',
-  'Node',
-  'React',
-  'Redux',
-  'NextJS',
   'Jenkins',
+  'GitHub',
+  'Bitbucket',
+  'Confluence',
+  'JIRA',
   'Splunk',
   'PagerDuty',
   'ServiceNow',
-  'JIRA',
-  'Confluence',
-  'Bitbucket',
-  'GitHub',
-  'Docker',
+  'SignalFX',
+  'New Relic',
+  'Adobe Analytics',
+  'Akamai',
+  'mPulse',
+  'Mural',
+  'Aha',
   'Figma',
   'Sketch',
-  'SignalFX',
-  'NewRelic',
-  'React Native',
-  'SEO',
   'and more!',
 ];
 
-/*
- * const methodologies = [
- *   'Agile',
- *   'Scrum',
- *   'Kanban',
- *   'CI/CD',
- *   'DevOps',
- *   'Lean',
- *   'KT',
- *   'TDD',
- *   'OOP',
- *   'Functional Programming',
- *   'Product Management',
- * ];
- */
+const methodologies = [
+  'Agile',
+  'Scrum',
+  'Kanban',
+  'Lean',
+  'CI/CD',
+  'DevOps',
+  'Functional Programming',
+  'OOP',
+  'TDD',
+  'Chaos Engineering',
+  'SEO',
+  'and Product Management',
+];
 
 const techSkills = [
-  { id: 'languages', other: languages, title: 'Languages' },
+  { id: 'technologies', other: technologies, title: 'Technologies' },
   { id: 'tools', other: tools, title: 'Tools' },
-  // { id: 'methodologies', other: methodologies, title: 'Methodologies' },
+  { id: 'methodologies', other: methodologies, title: 'Methodologies' },
 ];
 
 const TechSkills = () => (

@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import '../styles/global.css';
 
 const App = ({ Component, pageProps }) => {
-  const [isDarkTheme, setDarkTheme] = useState(true);
+  const [isDarkTheme, setDarkTheme] = useState(false);
   const invertTheme = () => setDarkTheme((wasDarkTheme) => !wasDarkTheme);
 
   return (
@@ -17,8 +17,8 @@ const App = ({ Component, pageProps }) => {
         <link href="s-icon.svg" rel="shortcut icon" />
         <link href="s-icon.svg" rel="icon" />
         <link href="s-icon.svg" rel="apple-touch-icon" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Shadows Into Light Two&family=Montserrat:wght@100" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Shadows Into Light Two&family=Montserrat:wght@200" rel="stylesheet" type="text/css" />
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Sierra Battan's personal website" name="description" />
@@ -26,17 +26,18 @@ const App = ({ Component, pageProps }) => {
         <meta name="keywords" content="Sierra Battan, Software Engineer" />
         <meta name="author" content="Sierra Battan" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Sierra Battan" />
-        <meta property="og:description" content="Sierra Battan" />
+        <meta name="title" property="og:title" content="Sierra Battan" />
+        <meta name="description" property="og:description" content="Sierra Battan" />
         <meta property="og:site_name" content="Personal Website" />
-        <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg" />
-        <meta property="og:url" content="http://euro-travel-example.com/index.htm" />
+        <meta name="image" property="og:image" content="https://sierraismy.name/s-icon.svg" />
+        <meta property="og:url" content="https://sierraismy.name" />
         <meta property="og:image" content="/s-icon.svg" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:creator" content="@sierrabattan" />
         <meta property="twitter:title" content="Sierra Battan" />
         <meta property="twitter:description" content="Sierra Battan's personal website" />
         <title>Sierra Battan</title>
+        <link rel="canonical" href="https://sierraismy.name" />
       </Head>
       <main className={isDarkTheme ? 'dark' : 'light'}>
         <Header invertTheme={invertTheme} />

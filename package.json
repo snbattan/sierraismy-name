@@ -1,7 +1,7 @@
 {
   "name": "sierraismy-name",
   "description": "Sierra Battan's website",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "pages/index.js",
   "scripts": {
     "build": "next build && next export",
@@ -10,7 +10,8 @@
     "deploy-long": "find ./out -type f -name '*.html' | while read HTMLFILE; do BASENAME=${HTMLFILE##*/}; FILENAME=${BASENAME%.*}; if [[ '$FILENAME' != 'index' ]]; then aws s3 cp s3://sierraismy-name/${BASENAME} s3://sierraismy-name/${FILENAME}; fi done",
     "dev": "next dev --port 2222",
     "lint": "eslint . --ext .js,.jsx",
-    "start": "next start"
+    "start": "next start",
+    "sitemap": "node ./sitemap-generator.js"
   },
   "repository": {
     "type": "git",
@@ -30,12 +31,11 @@
     "url": "https://github.com/sierraismy-name/website/issues"
   },
   "dependencies": {
-    "file-loader": "latest",
-    "next": "latest",
-    "prop-types": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "nextjs-sitemap-generator": "^1.3.1"
+    "next": "^12.0.2",
+    "nextjs-sitemap-generator": "^1.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "latest",
@@ -48,6 +48,7 @@
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-sort-keys-fix": "latest",
+    "file-loader": "^6.2.0",
     "webpack": "latest"
   },
   "browserslist": {

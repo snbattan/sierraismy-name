@@ -5,20 +5,30 @@ import { NikeIcon, OregonIcon, ResumeSection } from '../reusable';
 const experiences = [
   {
     icon: <NikeIcon />,
-    id: 'Nike FTE',
-    other: ['AWS', 'Java', 'Node', 'React'],
+    id: 'Nike FTE II',
+    other: ['AWS', 'JavaScript', 'React', 'Next.js', 'Node.js', 'TypeScript'],
     subtitles: [
-      'Nike, Inc.',
-      'November 2020 - Present',
+      'NIKE, Inc.',
+      'November 2021 - Present',
+    ],
+    title: 'Senior Software Engineer II',
+  },
+  {
+    icon: <NikeIcon />,
+    id: 'Nike FTE I',
+    other: ['AWS', 'JavaScript', 'React', 'Redux', 'Node.js', 'Java'],
+    subtitles: [
+      'NIKE, Inc.',
+      'November 2020 - October 2021',
     ],
     title: 'Software Engineer I',
   },
   {
     icon: <NikeIcon />,
     id: 'Nike ETW',
-    other: ['AWS', 'Node', 'React'],
+    other: ['AWS', 'JavaScript', 'React', 'Redux', 'Node.js'],
     subtitles: [
-      'Insight Global - Contracted at Nike, Inc.',
+      'Insight Global - Contracted at NIKE, Inc.',
       'June 2019 - October 2020',
     ],
     title: 'Software Engineer',
@@ -26,9 +36,9 @@ const experiences = [
   {
     icon: <NikeIcon />,
     id: 'Nike Intern',
-    other: ['Node', 'React'],
+    other: ['JavaScript', 'React', 'Redux', 'Node.js'],
     subtitles: [
-      'PRO Unlimited - Contracted at Nike, Inc.',
+      'PRO Unlimited - Contracted at NIKE, Inc.',
       'June 2018 - September 2018',
     ],
     title: 'Junior Software Engineer',

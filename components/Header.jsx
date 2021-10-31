@@ -10,7 +10,7 @@ const Header = ({ invertTheme }) => {
   return (
     <header className="book-end">
       <div style={{ display: 'flex', marginTop: '-12px' }}>
-        <div style={{ flexGrow: 1, marginBottom: '-12px', width: '100%' }}>
+        <div style={{ flexGrow: 1, marginBottom: '-12px', width: '80%' }}>
           <h1 style={{ marginBottom: '-24px' }}>Sierra Battan</h1>
           <h3>Software Engineer</h3>
         </div>
@@ -20,13 +20,20 @@ const Header = ({ invertTheme }) => {
             invertTheme();
           }}
           isOn={flip}
-          style={{ marginTop: '12px' }}
+          style={{
+            alignItems: 'flex-end',
+            display: 'flex',
+            flexDirection: 'column',
+            flexGrow: 0,
+            marginTop: '12px',
+            width: '20%',
+          }}
         />
       </div>
       <nav className="nav">
-        <NavLink href="/"><>HOME</></NavLink>
-        <NavLink href="/about"><>ABOUT ME</></NavLink>
-        <NavLink href="/resume"><>RESUME</></NavLink>
+        <NavLink href="/">Home </NavLink>
+        <NavLink href="/about">About Me </NavLink>
+        <NavLink href="/resume">Resume </NavLink>
       </nav>
     </header>
   );
