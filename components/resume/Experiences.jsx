@@ -48,7 +48,7 @@ const experiences = [
     id: 'UO Research',
     other: ['Java', 'Python'],
     subtitles: [
-      'University of Oregion - Computer & Information Science Department',
+      'University of Oregon - Computer & Information Science Department',
       'September 2016 - June 2018',
     ],
     title: 'Undergraduate Research Assistant',
