@@ -33,6 +33,7 @@ const App = ({ Component, pageProps }) => {
         <meta property="og:url" content="https://sierraismy.name" />
         <meta property="og:image" content="/s-icon.svg" />
         <meta name="publish_date" property="og:publish_date" content="2019-10-31T14:45:00-0700" />
+        <meta name="update_date" property="og:update_date" content="2019-11-01T08:00:00-0700" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:creator" content="@sierrabattan" />
         <meta property="twitter:title" content="Sierra Battan" />
