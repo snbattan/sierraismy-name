@@ -4,7 +4,7 @@
   "version": "1.0.2",
   "main": "pages/index.js",
   "scripts": {
-    "build": "next build && next export",
+    "build": "next build && next export && yarn sitemap",
     "deploy": "yarn deploy-short && yarn deploy-long",
     "deploy-short": "aws s3 sync out/ s3://sierraismy-name --acl public-read",
     "deploy-long": "find ./out -type f -name '*.html' | while read HTMLFILE; do BASENAME=${HTMLFILE##*/}; FILENAME=${BASENAME%.*}; if [[ '$FILENAME' != 'index' ]]; then aws s3 cp s3://sierraismy-name/${BASENAME} s3://sierraismy-name/${FILENAME}; fi done",
@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "next": "^12.0.2",
-    "nextjs-sitemap-generator": "^1.3.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -40,6 +39,7 @@
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/eslint-parser": "latest",
+    "@next/eslint-plugin-next": "^12.0.4",
     "eslint": "^7.25.0",
     "eslint-config-airbnb": "latest",
     "eslint-plugin-babel": "latest",
@@ -49,6 +49,7 @@
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-sort-keys-fix": "latest",
     "file-loader": "^6.2.0",
+    "nextjs-sitemap-generator": "^1.3.1",
     "webpack": "latest"
   },
   "browserslist": {

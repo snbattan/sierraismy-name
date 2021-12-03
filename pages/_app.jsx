@@ -14,32 +14,30 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <link href="s-icon.svg" rel="shortcut icon" />
-        <link href="s-icon.svg" rel="icon" />
-        <link href="s-icon.svg" rel="apple-touch-icon" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css2?family=Shadows Into Light Two&family=Montserrat:wght@200" rel="stylesheet" type="text/css" />
+        <link rel="apple-touch-icon" href="s-icon.svg" />
+        <link rel="canonical" href="https://sierraismy.name" />
+        <link rel="icon" href="https://sierraismy.name/s-icon.svg" />
+        <link rel="shortcut icon" href="https://sierraismy.name/s-icon.svg" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" display="swap" href="https://fonts.googleapis.com/css2?family=Shadows Into Light Two&family=Montserrat:wght@200" />
         <meta charSet="utf-8" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Sierra Battan's personal website" name="description" />
-        <meta content="#80b0f8" name="theme-color" />
-        <meta name="keywords" content="Sierra Battan, Software Engineer Personal Website, Full-Stack Software Engineer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Sierra Battan" />
-        <meta property="og:type" content="website" />
-        <meta name="title" property="og:title" content="Sierra Battan" />
-        <meta name="description" property="og:description" content="Sierra Battan's personal website. Visit to view her journey as a full-stack, cloud platform Software Engineer." />
-        <meta property="og:site_name" content="Personal Website" />
-        <meta name="image" property="og:image" content="https://sierraismy.name/s-icon.svg" />
-        <meta property="og:url" content="https://sierraismy.name" />
-        <meta property="og:image" content="/s-icon.svg" />
+        <meta name="description" property="og:description" content="Sierra Battan's personal website. Visit to view her journey as a senior full-stack software engineer." />
+        <meta name="image" property="og:image" content="https://sierraismy.name/s.png" />
+        <meta name="keywords" content="Sierra Battan, Software Engineer Personal Website, Full-Stack Software Engineer, React Software Engineer, JavaScript Software Engineer" />
         <meta name="publish_date" property="og:publish_date" content="2019-10-31T14:45:00-0700" />
-        <meta name="update_date" property="og:update_date" content="2019-11-01T08:00:00-0700" />
+        <meta name="theme-color" content="#80b0f8" />
+        <meta property="og:site_name" content="Personal Website" />
+        <meta name="title" property="og:title" content="Sierra Battan" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:creator" content="@sierrabattan" />
         <meta property="twitter:title" content="Sierra Battan" />
-        <meta property="twitter:description" content="Sierra Battan's personal website. Visit to view her journey as a full-stack, cloud platform Software Engineer." />
+        <meta property="twitter:description" content="Sierra Battan's personal website. Visit to view her journey as a senior full-stack software engineer." />
+        <meta property="og:type" content="website" />
+        <meta name="update_date" property="og:update_date" content="2021-12-03T05:00:00-0700" />
+        <meta property="og:url" content="https://sierraismy.name" />
         <title>Sierra Battan</title>
-        <link rel="canonical" href="https://sierraismy.name" />
       </Head>
       <main className={isDarkTheme ? 'dark' : 'light'}>
         <Header invertTheme={invertTheme} />

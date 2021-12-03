@@ -12,7 +12,7 @@ const Home = () => (
     <p>Please explore and reach out if you have any questions.</p>
     <Button isEmail label="Get in Touch" />
     <aside className="ta-c">
-      <img alt="Sierra Memoji" src="/memoji.png" style={{ maxWidth: '180px', width: '24vw' }} />
+      <img alt="Sierra Memoji" src="/s.png" style={{ maxWidth: '180px', width: '24vw' }} />
     </aside>
   </article>
 );

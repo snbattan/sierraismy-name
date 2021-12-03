@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const Sitemap = require('nextjs-sitemap-generator');
 
 const lastmod = new Date().toISOString().split('T')[0];

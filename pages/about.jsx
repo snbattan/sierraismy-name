@@ -29,11 +29,13 @@ const testimonials = [
 
 const hobbies = [
   'Fitness',
-  'Reading',
+  'Sustainability',
   'Organization',
-  'Design',
+  'UX Design',
+  'Minimalism',
   'Dance',
-  'and Travel - but not right now :)',
+  'Reading',
+  'and Travel',
 ];
 
 const About = () => (
