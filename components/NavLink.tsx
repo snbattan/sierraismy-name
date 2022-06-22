@@ -9,9 +9,9 @@ const NavLink = ({ children, href }: {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="nav-item">
       <Link href={href} passHref>
-        <a className={`nav-item${router.pathname === href ? ' active' : ''}`} href={href}>
+        <a className={router.pathname === href ? 'active' : ''} href={href}>
           {children}
         </a>
       </Link>

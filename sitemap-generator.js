@@ -8,7 +8,6 @@ Sitemap({
   nextConfigPath: `${__dirname}/next.config.js`,
   pagesConfig: {
     '/': { lastmod },
-    '/about': { lastmod },
     '/resume': { lastmod },
   },
   pagesDirectory: `${__dirname}/pages`,

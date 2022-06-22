@@ -11,14 +11,10 @@ const Resume = () => (
       <title>Sierra&apos;s Resume</title>
       <link rel="canonical" href="https://sierraismy.name/resume" />
     </Head>
-    <article className="col-12">
-      <h2>What does Sierra do?</h2>
-      <p>Sierra does a lot of things. Let&apos;s focus on what she does professionally.</p>
-      <section className="ta-c">
-        <TechSkills />
-        <Experiences />
-        <Education />
-      </section>
+    <article>
+      <TechSkills />
+      <Experiences />
+      <Education />
     </article>
   </>
 );

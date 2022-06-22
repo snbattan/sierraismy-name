@@ -14,7 +14,7 @@ const Information = ({ i, info, isChronological }: {
   <>
     {isChronological && i !== 0 && <i className="fas fa-2x fa-chevron-circle-up" />}
     <section className="resume-section-info col-7">
-      <h3>{info.title}</h3>
+      <h4>{info.title}</h4>
       {info.icon}
       {info.subtitles?.map((s) => <p key={s}>{s}</p>)}
       <pre>{info.other?.join(', ')}</pre>
