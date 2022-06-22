@@ -11,7 +11,7 @@ const experiences = [
   {
     icon: <DisneyIcon />,
     id: 'Disney Senior',
-    other: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'AWS'],
+    other: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Kubernetes'],
     subtitles: [
       'Disney Streaming',
       'February 2022 - Present',
