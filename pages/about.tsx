@@ -22,21 +22,24 @@ const testimonials = [
   'When there is a team of 10 or more with 100+ ideas with a mixture of different conversations - it takes an accountable and knowledgeable person to maintain the patience, composure and still execute for bigger vision! That\'s what Sierra has done.',
   // (continues below) 'She is absolutely amazing and impresses me all of the time.  She has taken it upon herself to ensure the documentation is current and accurate.  In a community format like the forum it is so important that the documentation be right.'
   'Sierra sees where the work needs to be done and just does it.', // The whole community is so much better because of her part in it.',
-  'Sierra is an extremely organized, driven, and passionate engineer.  She has an amazing ability to always be giving 100% effort, every single day.  The speed with which she is able to deliver solutions is remarkable and her attention to detail is unmatched.  Sierra has an excellent eye for UI design and user functionality and also a very strong sense of code readability and maintainability.', //  She is an exceptional engineer.',
   'Sierra was instrumental in translating the business cases to actionable stories, and contributed greatly to delivering a high - quality product in a timely manner.',
   'Sierra has put a lot of work into improving team morale. I know I can\'t see everything she\'s doing, but I\'m still constantly seeing her going out of her way to make sure our teammates and stakeholders feel appreciated.',
   'Sierra, thank you for your diligence and your commitment to do the right thing, in the right way, and demonstrating the "Act like an Owner" leadership principle.',
+  // (continues below) 'Sierra is an extremely organized, driven, and passionate engineer.  She has an amazing ability to always be giving 100% effort, every single day.'
+  'The speed with which Sierra is able to deliver solutions is remarkable and her attention to detail is unmatched.  She has an excellent eye for UI design and user functionality and also a very strong sense of code readability and maintainability.', //  She is an exceptional engineer.',
   // (continues below) 'Due to a miscommunication we all ended up in a tricky situation.'
-  'With Sierra\'s careful planning, quick thinking, expert knowledge, and excellent communication, we were able to fix a high-priority bug in time for the holidays.',
+  // 'With Sierra\'s careful planning, quick thinking, expert knowledge, and excellent communication, we were able to fix a high-priority bug in time for the holidays.',
 ];
 
 const hobbies = [
   'Fitness',
-  'Reading',
+  'Sustainability',
   'Organization',
-  'Design',
+  'UX Design',
+  'Minimalism',
   'Dance',
-  'and Travel - but not right now :)',
+  'Reading',
+  'and Travel',
 ];
 
 const About = () => (

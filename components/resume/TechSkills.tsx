@@ -3,14 +3,15 @@ import React from 'react';
 import { ResumeSection } from '../reusable';
 
 const technologies = [
-  'AWS',
   'JavaScript',
+  'TypeScript',
   'React',
-  'Redux',
   'Next.js',
   'Node.js',
+  'AWS',
   'HTML',
   'CSS',
+  'Redux',
   'Webpack',
   'Parcel',
   'Babel',
@@ -20,7 +21,6 @@ const technologies = [
   'Docker',
   'NoSQL',
   'SQL',
-  'TypeScript',
   'React Native',
   'Java',
   'and Python',
