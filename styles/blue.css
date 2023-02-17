@@ -1,0 +1,160 @@
+* { box-sizing: border-box; }
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, 'Montserrat', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--snow-color);
+  color: var(--teal-color);
+}
+main {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+a { color: inherit; text-decoration: none; }
+a:hover, a:focus { filter: brightness(90%); }
+footer {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pink-color);
+}
+h1 { line-height: 1.12em; margin: 0px; }
+h2 { line-height: 1.12em; margin: 0px; }
+h3 { line-height: 1.12em; margin: 0px; }
+h4 { line-height: 1.12em; margin: 0px; }
+h5 { line-height: 1.12em; margin: 0px; }
+h6 { line-height: 1.12em; margin: 0px; }
+p { line-height: 1.12em; margin: 0px; }
+button {
+  margin-top: 24px;
+  margin-bottom: 6px;
+  background-color: var(--pink-color);
+  border: 1px solid var(--teal-color);
+  color: var(--teal-color);
+  border-radius: 2px;
+}
+
+:root {
+  --snow-color: #ffffff;
+  /* --navy-color: #335991;
+  --blue-color: #DFEAFD; */
+  --teal-color: #246361;
+  --turq-color: #dbf1f0;
+  --rose-color: #EEBCD2;
+  --pink-color: #F8E1EA;
+}
+
+.alegreya-sans { font-family: 'Alegreya Sans', sans-serif; letter-spacing: 0.03em; }
+.italiana { font-family: 'Italiana', serif; letter-spacing: 0.04em; }
+.julius-sans-one { font-family: 'Julius Sans One', sans-serif; letter-spacing: 0.02em; line-height: 1.4em; }
+.lexend-deca { font-family: 'Lexend Deca', sans-serif; }
+.montserrat { font-family: 'Montserrat', sans-serif; }
+.poiret-one { font-family: 'Poiret One', sans-serif; letter-spacing: 0.06em; }
+.shadows-into-light-two { font-family: 'Shadows Into Light Two', cursive; letter-spacing: 0.12em; line-height: 1.4em; }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.container {
+  min-height: calc(100vh - 60px);
+  padding: 1rem;
+}
+
+.title {
+  color: var(--rose-color);
+  text-decoration: none;
+  font-size: 3rem;
+  transform: rotate(-6deg);
+  margin-bottom: 100px;
+}
+.title p { margin: -10px; }
+
+.divider {
+  background-image: url('../public/divider.png');
+  background-size: 280px;
+  height: 100px;
+  width: 280px;
+}
+.divider.pad {
+  margin-bottom: 40px;
+}
+.date {
+  background-image: url('../public/date.png');
+  background-position: center;
+  background-size: 360px;
+  height: 260px;
+  width: 360px;
+}
+
+.grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 260px;
+  background-color: var(--teal-color);
+  border: 1px solid var(--teal-color);
+  color: var(--snow-color);
+}
+.card:hover, .card:focus, .card:active {
+  border-color: var(--snow-color);
+}
+.card h3 { margin-bottom: 4px; }
+
+.card.guest {
+  color: var(--teal-color);
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.guest.bride { background-color: var(--pink-color); }
+.guest.groom { background-color: var(--turq-color); }
+.guest.both { background-color: var(--snow-color); }
+
+.card.stationary {
+  background-color: var(--snow-color);
+  border-color: var(--teal-color);
+  color: var(--teal-color);
+  height: calc(160px + 20vw);
+  padding: 1rem;
+  text-align: center;
+  width: calc(300px + 20vw)
+}
