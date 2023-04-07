@@ -11,7 +11,7 @@ const experiences = [
   {
     icon: <DisneyIcon />,
     id: 'Disney Senior',
-    other: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Kubernetes'],
+    other: ['TypeScript', 'JavaScript', 'Next.js', 'React', 'Redux', 'Node.js', 'Kubernetes', 'Java'],
     subtitles: [
       'Disney Streaming',
       'February 2022 - Present',
@@ -21,7 +21,7 @@ const experiences = [
   {
     icon: <NikeIcon />,
     id: 'Nike FTE II',
-    other: ['JavaScript', 'React', 'Next.js', 'Node.js', 'AWS', 'TypeScript'],
+    other: ['JavaScript', 'Next.js', 'React', 'Redux', 'Node.js', 'AWS'],
     subtitles: [
       'NIKE, Inc.',
       'November 2021 - February 2022',
@@ -63,7 +63,7 @@ const experiences = [
     id: 'UO Research',
     other: ['Java', 'Python'],
     subtitles: [
-      'University of Oregon - Computer & Information Science Department',
+      'University of Oregon',
       'September 2016 - June 2018',
     ],
     title: 'Undergraduate Research Assistant',

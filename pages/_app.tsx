@@ -37,13 +37,15 @@ const App = ({ Component, pageProps }: AppProps) => (
       <meta property="twitter:title" content="Sierra Battan" />
       <meta property="twitter:description" content="Sierra Battan's personal website. Visit to view her journey as a senior full-stack software engineer." />
     </Head>
-    <Header />
-    <main className="bg-white tc-dnavy">
-      {/* add color preference here: l, m, or d */}
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Component {...pageProps} />
-    </main>
-    <Footer />
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Header />
+      <main className="bg-white tc-dnavy">
+        {/* add color preference here: l, m, or d */}
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+    </div>
   </>
 );
 

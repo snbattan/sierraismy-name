@@ -6,4 +6,4 @@ coverage
 dist
 node_modules
 out
-components/blue
+blue

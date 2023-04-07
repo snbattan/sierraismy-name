@@ -4,14 +4,16 @@ const CarouselArrow = ({ isRight, onClick }: {
   isRight?: boolean,
   onClick: () => void,
 }) => (
-  <i
-    aria-label="arrow-right"
-    className={`fas fa-2x fa-angle-${isRight ? 'right' : 'left'}`}
+  <button
+    aria-label={`arrow-${isRight ? 'right' : 'left'}`}
+    className="material-icons"
     onClick={onClick}
     onKeyPress={onClick}
     role="button"
     tabIndex={0}
-  />
+  >
+    {`chevron_${isRight ? 'right' : 'left'}`}
+  </button>
 );
 
 CarouselArrow.defaultProps = {
@@ -23,14 +25,16 @@ const CarouselIndicator = ({ activeIndex, index, onClick }: {
   index: number,
   onClick: () => void,
 }) => (
-  <i
+  <button
     aria-hidden="true"
-    className={`fa-xs fa-circle ${index === activeIndex ? 'fas' : 'far'}`}
+    className="material-icons md-18"
     onClick={onClick}
     onKeyPress={onClick}
     role="button"
     tabIndex={0}
-  />
+  >
+    {`radio_button_${activeIndex === index ? 'checked' : 'unchecked'}`}
+  </button>
 );
 
 const CarouselSlide = ({ activeIndex, index, slide }: {
@@ -58,18 +62,18 @@ const Carousel = ({ slides }: {
   const goToPrevSlide = () => goToSlide((activeIndex - 1 + slides.length) % slides.length);
   const goToNextSlide = () => goToSlide((activeIndex + 1) % slides.length);
 
-  const timerRef = useRef(null);
+  const timerRef = useRef<number | null>(null);
   useEffect(() => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
     }
-    timerRef.current = setTimeout(() => {
+    timerRef.current = window.setTimeout(() => {
       if (auto) {
         setActiveIndex((activeIndex + 1) % slides.length);
       }
       // 9 seconds to view each slide
     }, 9000);
-    return () => clearTimeout(timerRef.current);
+    return () => { if (timerRef.current) clearTimeout(timerRef.current) };
   }, [activeIndex, auto, slides.length]);
 
   return (
@@ -88,7 +92,7 @@ const Carousel = ({ slides }: {
         </ul>
         <CarouselArrow isRight onClick={goToNextSlide} />
       </section>
-      <ul className="ta-c" style={{ padding: '0px' }}>
+      <ul style={{ padding: '0px', textAlign: 'center' }}>
         {slides.map((slide, index) => (
           <CarouselIndicator
             key={`${slide.id}-indicator`}

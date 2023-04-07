@@ -3,7 +3,7 @@ import React from 'react';
 const Information = ({ i, info, isChronological }: {
   i: number,
   info: {
-    icon?: JSX.Element,
+    icon?: React.ReactNode,
     id: string,
     other: Array<string>,
     subtitles?: Array<string>,
@@ -12,9 +12,9 @@ const Information = ({ i, info, isChronological }: {
   isChronological?: boolean,
 }) => (
   <>
-    {isChronological && i !== 0 && <i className="fas fa-2x fa-chevron-circle-up" />}
-    <section className="resume-section-info col-7">
-      <h4>{info.title}</h4>
+    {isChronological && i !== 0 && <span className='material-icons'>expand_less</span>}
+    <section className="resume-section-info">
+      <h5>{info.title}</h5>
       {info.icon}
       {info.subtitles?.map((s) => <p key={s}>{s}</p>)}
       <pre>{info.other?.join(', ')}</pre>
@@ -28,7 +28,7 @@ Information.defaultProps = {
 
 const ResumeSection = ({ information, isChronological, title }: {
   information: Array<{
-    icon?: JSX.Element,
+    icon?: React.ReactNode,
     id: string,
     other: Array<string>,
     subtitles?: Array<string>,
@@ -38,7 +38,7 @@ const ResumeSection = ({ information, isChronological, title }: {
   title: string,
 }) => (
   <article className="resume-section">
-    <h3>{title}</h3>
+    <h4>{title}</h4>
     {information.map((info, i) => (
       <Information
         key={info.id}
