@@ -2,6 +2,6 @@
 
 This is Sierra's website to display to the world whatever she pleases while learning new technologies!
 
-This will take a long time to develop and you should be patient with her.
+This will be an iterative process. Get ready for a bumpy ride :)
 
 ## HAVE FUN :nerd_face:

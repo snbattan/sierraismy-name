@@ -1,20 +1,18 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const Button = ({ isEmail, label, onClick }) => (isEmail
+const Button = ({ isEmail, label, onClick }: {
+  isEmail?: boolean,
+  label?: string,
+  onClick?: () => void,
+}) => (isEmail
   ? <a className="button" href="mailto:snbattan@gmail.com">{label}</a>
   : <button className="button" onClick={onClick} type="button">{label}</button>
 );
 
 Button.defaultProps = {
   isEmail: false,
-  onClick: () => {},
-};
-
-Button.propTypes = {
-  isEmail: PropTypes.bool,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  label: 'Submit',
+  onClick: () => { },
 };
 
 export default Button;

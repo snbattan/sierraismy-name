@@ -1,83 +1,79 @@
-import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 
-const CarouselArrow = ({ isRight, onClick }) => (
-  <i
-    className={`fas fa-2x fa-angle-${isRight ? 'right' : 'left'}`}
-    label="arrow-right"
+const CarouselArrow = ({ isRight, onClick }: {
+  isRight?: boolean,
+  onClick: () => void,
+}) => (
+  <button
+    aria-label={`arrow-${isRight ? 'right' : 'left'}`}
+    className="material-icons"
     onClick={onClick}
     onKeyPress={onClick}
     role="button"
     tabIndex={0}
-  />
+  >
+    {`chevron_${isRight ? 'right' : 'left'}`}
+  </button>
 );
 
 CarouselArrow.defaultProps = {
   isRight: false,
 };
 
-CarouselArrow.propTypes = {
-  isRight: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
-};
-
-const CarouselIndicator = ({ activeIndex, index, onClick }) => (
-  <i
+const CarouselIndicator = ({ activeIndex, index, onClick }: {
+  activeIndex: number
+  index: number,
+  onClick: () => void,
+}) => (
+  <button
     aria-hidden="true"
-    className={`fa-xs fa-circle ${index === activeIndex ? 'fas' : 'far'}`}
-    label="indicator"
+    className="material-icons md-18"
     onClick={onClick}
     onKeyPress={onClick}
     role="button"
     tabIndex={0}
-  />
+  >
+    {`radio_button_${activeIndex === index ? 'checked' : 'unchecked'}`}
+  </button>
 );
 
-CarouselIndicator.propTypes = {
-  activeIndex: PropTypes.number.isRequired,
-  index: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
-};
-
-const CarouselSlide = ({ activeIndex, index, slide }) => (
+const CarouselSlide = ({ activeIndex, index, slide }: {
+  activeIndex: number
+  index: number,
+  slide: JSX.Element,
+}) => (
   <li className={`carousel-slide ${index === activeIndex && 'visible'}`}>
     {slide}
   </li>
 );
 
-CarouselSlide.propTypes = {
-  activeIndex: PropTypes.number.isRequired,
-  index: PropTypes.number.isRequired,
-  slide: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
-};
-
-const Carousel = ({ slides }) => {
+const Carousel = ({ slides }: {
+  slides: Array<{ id: string, value: JSX.Element }>
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [auto, setAuto] = useState(true);
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setAuto(false);
     setActiveIndex(index);
   };
 
   // add length since % is remainder, not the true mod
   const goToPrevSlide = () => goToSlide((activeIndex - 1 + slides.length) % slides.length);
-
   const goToNextSlide = () => goToSlide((activeIndex + 1) % slides.length);
 
-  const timerRef = useRef(null);
-
+  const timerRef = useRef<number | null>(null);
   useEffect(() => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
     }
-    timerRef.current = setTimeout(() => {
+    timerRef.current = window.setTimeout(() => {
       if (auto) {
         setActiveIndex((activeIndex + 1) % slides.length);
       }
-    // 9 seconds to view each slide
+      // 9 seconds to view each slide
     }, 9000);
-    return () => clearTimeout(timerRef.current);
+    return () => { if (timerRef.current) clearTimeout(timerRef.current) };
   }, [activeIndex, auto, slides.length]);
 
   return (
@@ -96,7 +92,7 @@ const Carousel = ({ slides }) => {
         </ul>
         <CarouselArrow isRight onClick={goToNextSlide} />
       </section>
-      <ul className="ta-c" style={{ padding: '0px' }}>
+      <ul style={{ padding: '0px', textAlign: 'center' }}>
         {slides.map((slide, index) => (
           <CarouselIndicator
             key={`${slide.id}-indicator`}
@@ -108,13 +104,6 @@ const Carousel = ({ slides }) => {
       </ul>
     </>
   );
-};
-
-Carousel.propTypes = {
-  slides: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    value: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
-  })).isRequired,
 };
 
 export default Carousel;

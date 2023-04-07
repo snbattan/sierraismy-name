@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import React from 'react';
 
 import { ResumeSection } from '../reusable';
@@ -12,6 +11,8 @@ const technologies = [
   'AWS',
   'HTML',
   'CSS',
+  'Stitches',
+  'Sass',
   'Redux',
   'Webpack',
   'Parcel',
@@ -19,12 +20,15 @@ const technologies = [
   'ESLint',
   'Jest',
   'Git',
+  'npm',
+  'pnpm',
+  'yarn',
   'Docker',
   'NoSQL',
   'SQL',
-  'React Native',
   'Java',
-  'and Python',
+  'React Native',
+  'and Python.',
 ];
 
 const tools = [
@@ -33,6 +37,8 @@ const tools = [
   'Bitbucket',
   'Confluence',
   'JIRA',
+  'Slack',
+  'Datadog',
   'Splunk',
   'PagerDuty',
   'ServiceNow',
@@ -56,11 +62,11 @@ const methodologies = [
   'CI/CD',
   'DevOps',
   'Functional Programming',
-  'OOP',
-  'TDD',
+  'Object-Oriented Programming',
+  'Test-Driven Development',
   'Chaos Engineering',
-  'SEO',
-  'and Product Management',
+  'Search Engine Optimization',
+  'and Product Management.',
 ];
 
 const techSkills = [
@@ -70,12 +76,10 @@ const techSkills = [
 ];
 
 const TechSkills = () => (
-  <>
-    <ResumeSection
-      information={techSkills}
-      title="TECHNICAL SKILLS"
-    />
-  </>
+  <ResumeSection
+    information={techSkills}
+    title="TECHNICAL SKILLS"
+  />
 );
 
 export default TechSkills;
