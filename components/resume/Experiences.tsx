@@ -13,7 +13,7 @@ const experiences = [
     id: 'Disney Senior',
     other: ['TypeScript', 'JavaScript', 'Next.js', 'React', 'Redux', 'Node.js', 'Kubernetes', 'Java'],
     subtitles: [
-      'Disney Streaming',
+      'The Walt Disney Company',
       'February 2022 - Present',
     ],
     title: 'Senior Software Engineer',
@@ -24,7 +24,7 @@ const experiences = [
     other: ['JavaScript', 'Next.js', 'React', 'Redux', 'Node.js', 'AWS'],
     subtitles: [
       'NIKE, Inc.',
-      'November 2021 - February 2022',
+      'November 2021 - January 2022',
     ],
     title: 'Senior Software Engineer II',
   },

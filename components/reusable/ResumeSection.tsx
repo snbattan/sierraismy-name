@@ -12,7 +12,9 @@ const Information = ({ i, info, isChronological }: {
   isChronological?: boolean,
 }) => (
   <>
-    {isChronological && i !== 0 && <span className='material-icons'>expand_less</span>}
+    {isChronological && i !== 0
+      ? <span className='material-icons'>expand_less</span>
+      : <br />}
     <section className="resume-section-info">
       <h5>{info.title}</h5>
       {info.icon}
@@ -37,7 +39,7 @@ const ResumeSection = ({ information, isChronological, title }: {
   isChronological?: boolean,
   title: string,
 }) => (
-  <article className="resume-section">
+  <section className="content">
     <h4>{title}</h4>
     {information.map((info, i) => (
       <Information
@@ -47,7 +49,7 @@ const ResumeSection = ({ information, isChronological, title }: {
         isChronological={isChronological}
       />
     ))}
-  </article>
+  </section>
 );
 
 ResumeSection.defaultProps = {

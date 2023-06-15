@@ -80,11 +80,11 @@ const getExperience = () => {
   const firstDay = new Date('06/25/2018');
 
   const experience = today.getTime() - firstDay.getTime();
-  const experienceYears = (experience / oneYear).toFixed(0);
-  const experienceMonths = ((experience % oneYear) / oneMonth).toFixed(0);
-  const experienceDays = ((experience % oneMonth) / oneDay).toFixed(0);
+  const experienceYears = Math.floor(experience / oneYear);
+  const experienceMonths = Math.floor((experience % oneYear) / oneMonth);
+  const experienceDays = Math.ceil((experience % oneMonth) / oneDay);
 
-  return `${experienceYears} years ${experienceMonths} month${experienceMonths === '1' ? '' : 's'} and ${experienceDays} day${experienceDays === '1' ? '' : 's'}`;
+  return `${experienceYears} years ${experienceMonths} month${experienceMonths === 1 ? '' : 's'} and ${experienceDays} day${experienceDays === 1 ? '' : 's'}`;
 };
 
 const Resume = () => {
@@ -93,11 +93,11 @@ const Resume = () => {
     <>
       <Head>
         <title>Sierra&apos;s Resume</title>
-        <link rel="canonical" href="https://sierraismy.name/resume" />
       </Head>
-      <article>
+      <article className="content">
         <h3>Web Developer</h3>
-        <p>Sierra is a seasoned full-stack engineer, project coordinator, and technical leader with {experience} of experience developing public-facing, cloud-native web applications.</p>
+        <p>Sierra is a seasoned and spirited full-stack engineer, project coordinator, and technical leader with <b>{experience}</b> of experience designing and supporting consumer-facing, cloud-native, web applications.</p>
+        <br />
         <h4>Testimonials</h4>
         <Carousel
           slides={testimonials.map((quote) => ({

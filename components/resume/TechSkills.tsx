@@ -12,13 +12,15 @@ const technologies = [
   'HTML',
   'CSS',
   'Stitches',
+  'Emotion',
   'Sass',
   'Redux',
+  'Turbopack',
   'Webpack',
   'Parcel',
-  'Babel',
   'ESLint',
   'Jest',
+  'Cypress',
   'Git',
   'npm',
   'pnpm',
@@ -27,8 +29,8 @@ const technologies = [
   'NoSQL',
   'SQL',
   'Java',
+  'Python',
   'React Native',
-  'and Python.',
 ];
 
 const tools = [
@@ -46,12 +48,7 @@ const tools = [
   'New Relic',
   'Adobe Analytics',
   'Akamai',
-  'mPulse',
-  'Mural',
-  'Aha',
   'Figma',
-  'Sketch',
-  'and more!',
 ];
 
 const methodologies = [
@@ -61,12 +58,14 @@ const methodologies = [
   'Lean',
   'CI/CD',
   'DevOps',
+  'Story Writing & Estimation',
+  'Prioritization',
+  'Product Management',
+  'Refactoring',
   'Functional Programming',
-  'Object-Oriented Programming',
   'Test-Driven Development',
   'Chaos Engineering',
   'Search Engine Optimization',
-  'and Product Management.',
 ];
 
 const techSkills = [

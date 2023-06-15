@@ -15,7 +15,20 @@ const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <title>Sierra Battan</title>
+      <link rel="apple-touch-icon" href="https://sierraismy.name/s-icon.svg" />
       <link rel="canonical" href="https://sierraismy.name" />
+      <link rel="icon" href="https://sierraismy.name/s-icon.svg" />
+      <link rel="shortcut icon" href="https://sierraismy.name/s-icon.svg" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link
+        as="font"
+        href="https://fonts.googleapis.com/css?family=Shadows Into Light Two|Montserrat:300,400,600&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+      {/* <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Italiana&family=Julius+Sans+One&family=Lexend+Deca:wght@200&family=Poiret+One&display=swap" rel="stylesheet" crossOrigin="true" /> */}
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossOrigin="true" />
       <meta charSet="utf-8" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta content="Sierra Battan's personal website. Visit to view her journey as a senior full-stack software engineer." name="description" />
@@ -37,9 +50,9 @@ const App = ({ Component, pageProps }: AppProps) => (
       <meta property="twitter:title" content="Sierra Battan" />
       <meta property="twitter:description" content="Sierra Battan's personal website. Visit to view her journey as a senior full-stack software engineer." />
     </Head>
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="tc-dnavy" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Header />
-      <main className="bg-white tc-dnavy">
+      <main className="bg-white">
         {/* add color preference here: l, m, or d */}
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />

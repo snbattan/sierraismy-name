@@ -11,7 +11,7 @@ const NavLink = ({ children, href }: {
   return (
     <div className="nav-item">
       <Link href={href} passHref>
-        <a href={href} className={router.pathname === href ? '' : 'inactive'}>
+        <a href={href} className={router.pathname === href ? 'active' : ''}>
           {children}
         </a>
       </Link>

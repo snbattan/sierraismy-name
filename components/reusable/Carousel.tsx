@@ -26,7 +26,6 @@ const CarouselIndicator = ({ activeIndex, index, onClick }: {
   onClick: () => void,
 }) => (
   <button
-    aria-hidden="true"
     className="material-icons md-18"
     onClick={onClick}
     onKeyPress={onClick}
