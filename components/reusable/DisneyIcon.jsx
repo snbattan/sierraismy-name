@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const DisneyIcon = () => (
   <svg
@@ -9,8 +9,8 @@ const DisneyIcon = () => (
     preserveAspectRatio="xMidYMid meet"
     role="img"
     style={{
-      marginBottom: '-10px',
-      marginTop: '-20px',
+      marginBottom: "-10px",
+      marginTop: "-20px",
     }}
     version="1.0"
     viewBox="0 0 900 768"

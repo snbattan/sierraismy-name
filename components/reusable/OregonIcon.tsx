@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const OregonIcon = () => (
   <svg
@@ -7,7 +7,7 @@ const OregonIcon = () => (
     focusable="false"
     height="33px"
     role="img"
-    style={{ marginBottom: '4px', marginTop: '-6px' }}
+    style={{ marginBottom: "4px", marginTop: "-6px" }}
     viewBox="0 0 365 300.23"
     width="33px"
     xmlns="http://www.w3.org/2000/svg"

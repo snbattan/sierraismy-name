@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const NikeIcon = () => (
   <svg
@@ -8,8 +8,8 @@ const NikeIcon = () => (
     height="48px"
     role="img"
     style={{
-      marginBottom: '-10px',
-      marginTop: '-20px',
+      marginBottom: "-10px",
+      marginTop: "-20px",
     }}
     viewBox="0 0 48 48"
     width="48px"

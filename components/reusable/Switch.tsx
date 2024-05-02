@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const Switch = ({ handleToggle, isOn, style }: {
-  handleToggle: () => void,
-  isOn?: boolean,
-  style?: object,
+const Switch = ({
+  handleToggle,
+  isOn,
+  style,
+}: {
+  handleToggle: () => void;
+  isOn?: boolean;
+  style?: object;
 }) => (
-  <div
-    aria-label="light-dark-mode-switch"
-    style={style}
-  >
+  <div aria-label="light-dark-mode-switch" style={style}>
     <input
       checked={isOn}
       onChange={handleToggle}
@@ -17,10 +18,7 @@ const Switch = ({ handleToggle, isOn, style }: {
       type="checkbox"
     />
     {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-    <label
-      className="react-switch-label"
-      htmlFor="react-switch-new"
-    >
+    <label className="react-switch-label" htmlFor="react-switch-new">
       <span className="react-switch-button" />
     </label>
   </div>

@@ -1,25 +1,33 @@
-import React from 'react';
+import React from "react";
 
-const Information = ({ i, info, isChronological }: {
-  i: number,
+const Information = ({
+  i,
+  info,
+  isChronological,
+}: {
+  i: number;
   info: {
-    icon?: React.ReactNode,
-    id: string,
-    other: Array<string>,
-    subtitles?: Array<string>,
-    title: string,
-  },
-  isChronological?: boolean,
+    icon?: React.ReactNode;
+    id: string;
+    other: Array<string>;
+    subtitles?: Array<string>;
+    title: string;
+  };
+  isChronological?: boolean;
 }) => (
   <>
-    {isChronological && i !== 0
-      ? <span className='material-icons'>expand_less</span>
-      : <br />}
+    {isChronological && i !== 0 ? (
+      <span className="material-icons">expand_less</span>
+    ) : (
+      <br />
+    )}
     <section className="resume-section-info">
       <h5>{info.title}</h5>
       {info.icon}
-      {info.subtitles?.map((s) => <p key={s}>{s}</p>)}
-      <pre>{info.other?.join(', ')}</pre>
+      {info.subtitles?.map((s) => (
+        <p key={s}>{s}</p>
+      ))}
+      <pre>{info.other?.join(", ")}</pre>
     </section>
   </>
 );
@@ -28,16 +36,20 @@ Information.defaultProps = {
   isChronological: false,
 };
 
-const ResumeSection = ({ information, isChronological, title }: {
+const ResumeSection = ({
+  information,
+  isChronological,
+  title,
+}: {
   information: Array<{
-    icon?: React.ReactNode,
-    id: string,
-    other: Array<string>,
-    subtitles?: Array<string>,
-    title: string,
-  }>,
-  isChronological?: boolean,
-  title: string,
+    icon?: React.ReactNode;
+    id: string;
+    other: Array<string>;
+    subtitles?: Array<string>;
+    title: string;
+  }>;
+  isChronological?: boolean;
+  title: string;
 }) => (
   <section className="content">
     <h4>{title}</h4>

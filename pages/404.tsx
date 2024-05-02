@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import Error from './_error';
+import Error from "./_error";
 
 const Error404 = () => <Error statusCode={404} />;
 
