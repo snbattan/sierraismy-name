@@ -10,7 +10,7 @@ Sitemap({
     '/': { lastmod },
     '/resume': { lastmod },
   },
-  pagesDirectory: `${__dirname}/pages`,
+  pagesDirectory: `${__dirname}/app`,
   sitemapFilename: 'sitemap.xml',
   sitemapStylesheet: [
     {
@@ -18,5 +18,5 @@ Sitemap({
       type: 'text/css',
     },
   ],
-  targetDirectory: `${__dirname}/public/`,
+  targetDirectory: `${__dirname}/components/`,
 });

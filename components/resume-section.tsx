@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const Information = ({
   i,
   info,
-  isChronological,
+  isChronological = false,
 }: {
   i: number;
   info: {
@@ -16,29 +16,19 @@ const Information = ({
   isChronological?: boolean;
 }) => (
   <>
-    {isChronological && i !== 0 ? (
-      <span className="material-icons">expand_less</span>
-    ) : (
-      <br />
-    )}
-    <section className="resume-section-info">
-      <h5>{info.title}</h5>
-      {info.icon}
-      {info.subtitles?.map((s) => (
-        <p key={s}>{s}</p>
-      ))}
-      <pre>{info.other?.join(", ")}</pre>
-    </section>
+    {i !== 0 && (isChronological ? (<p aria-hidden className='p-2'>^</p>) : (<br aria-hidden />))}
+    <div className='flex flex-col place-items-center gap-1 ring-2 w-full p-4'>
+      <h5 className='text-xl font-medium'>{info.title}</h5>
+      {Boolean(info.icon) && <p aria-hidden className='h-8'>{info.icon}</p>}
+      {info.subtitles?.map((s) => <p key={s}>{s}</p>)}
+      <p className='text-xs'>{info.other?.join(', ')}</p>
+    </div>
   </>
 );
 
-Information.defaultProps = {
-  isChronological: false,
-};
-
 const ResumeSection = ({
   information,
-  isChronological,
+  isChronological = false,
   title,
 }: {
   information: Array<{
@@ -51,8 +41,8 @@ const ResumeSection = ({
   isChronological?: boolean;
   title: string;
 }) => (
-  <section className="content">
-    <h4>{title}</h4>
+  <section className="w-full py-4">
+    <h4 className='text-2xl pb-4'>{title}</h4>
     {information.map((info, i) => (
       <Information
         key={info.id}
@@ -63,9 +53,5 @@ const ResumeSection = ({
     ))}
   </section>
 );
-
-ResumeSection.defaultProps = {
-  isChronological: false,
-};
 
 export default ResumeSection;

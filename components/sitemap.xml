@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/styles/global.css" type="text/css" ?>
+
+      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+      
+	<url>
+		<loc>https://sierraismy.name/blue/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+
+	<url>
+		<loc>https://sierraismy.name/favicon/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+
+	<url>
+		<loc>https://sierraismy.name/s-icon/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+
+	<url>
+		<loc>https://sierraismy.name/resume/page/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+
+	<url>
+		<loc>https://sierraismy.name/layout/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+
+	<url>
+		<loc>https://sierraismy.name/loading/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+
+	<url>
+		<loc>https://sierraismy.name/page/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+
+	<url>
+		<loc>https://sierraismy.name/s/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+
+	<url>
+		<loc>https://sierraismy.name/globals/</loc>
+		<lastmod>2024-09-23</lastmod>
+	</url>
+</urlset>

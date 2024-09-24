@@ -1,15 +1,18 @@
-import Head from "next/head";
-import React, { useMemo } from "react";
+/* eslint-disable max-len */
 
-import Education from "../components/resume/Education";
-import Experiences from "../components/resume/Experiences";
-import TechSkills from "../components/resume/TechSkills";
-import { Carousel } from "../components/reusable";
+'use client';
+
+import React from 'react';
+
+import Education from '../../components/education';
+import Experiences from '../../components/experiences';
+import TechSkills from '../../components/skills';
+import { Carousel } from '../../components';
 
 const testimonials = [
   "Sierra's attention to detail and constant striving for perfection allows teams to ascend to a higher standard in coding practices, overall quality of work, and team organization.  I believe every team should have someone like her to keep their company on the right track.",
-  "Sierra has such a strong sense of what is right and the will and organization to do it.  Every time.",
-  "Sierra is such an incredible champion for the organization. She spends not only a ton of time raising the bar for our technical knowledge and decisions, but also makes sure to think about how we can continue to strive to be a better group. She finds a way to imbue that in all aspects, not just the code.",
+  'Sierra has such a strong sense of what is right and the will and organization to do it.  Every time.',
+  'Sierra is such an incredible champion for the organization. She spends not only a ton of time raising the bar for our technical knowledge and decisions, but also makes sure to think about how we can continue to strive to be a better group. She finds a way to imbue that in all aspects, not just the code.',
   // (continues below) Sierra has shown us that engineers are more than code wizards.
   "Her passion for trying new ideas and pushing boundaries is truly infectious! But what really sets Sierra apart is her dedication to teamwork and collaboration. She has completely changed our perspective on what real partner collaboration looks like, and it's incredibly inspiring.",
   /*
@@ -25,7 +28,7 @@ const testimonials = [
   // "She is absolutely amazing and impresses me all of the time.  She has taken it upon herself to ensure the documentation is current and accurate.  In a community format like the forum it is so important that the documentation be right. Sierra sees where the work needs to be done and just does it. The whole community is so much better because of her part in it.',
   // "Sierra was instrumental in translating the business cases to actionable stories, and contributed greatly to delivering a high-quality product in a timely manner.",
   // (continues below) "Sierra is an extremely organized, driven, and passionate engineer.  She has an amazing ability to always be giving 100% effort, every single day.",
-  "The speed with which Sierra is able to deliver solutions is remarkable and her attention to detail is unmatched.  She has an excellent eye for UI design and user functionality and also a very strong sense of code readability and maintainability.", //  She is an exceptional engineer.',
+  'The speed with which Sierra is able to deliver solutions is remarkable and her attention to detail is unmatched.  She has an excellent eye for UI design and user functionality and also a very strong sense of code readability and maintainability.', //  She is an exceptional engineer.',
   "Sierra has put a lot of work into improving team morale. I know I can't see everything she's doing, but I'm still constantly seeing her going out of her way to make sure our teammates and stakeholders feel appreciated.",
   // "Sierra, thank you for your diligence and your commitment to do the right thing, in the right way, and demonstrating the "Act like an Owner" leadership principle.",
   // 'Due to a miscommunication we all ended up in a tricky situation. With Sierra\'s careful planning, quick thinking, expert knowledge, and excellent communication, we were able to fix a high-priority bug in time for the holidays.',
@@ -71,52 +74,47 @@ const testimonials = [
  * C&M Slack Takeover challenge for International Women’s Month March 23rd
  */
 
-const getExperience = () => {
-  const oneDay = 1000 * 60 * 60 * 24;
-  const oneMonth = oneDay * 30.4375;
-  const oneYear = oneMonth * 12;
+// const getExperience = () => {
+//   const oneDay = 1000 * 60 * 60 * 24;
+//   const oneMonth = oneDay * 30.4375;
+//   const oneYear = oneMonth * 12;
 
-  const today = new Date();
-  const firstDay = new Date("09/19/2016");
+//   const today = new Date();
+//   const firstDay = new Date('09/19/2016');
 
-  const experience = today.getTime() - firstDay.getTime();
-  const experienceYears = Math.floor(experience / oneYear);
-  const experienceMonths = Math.floor((experience % oneYear) / oneMonth);
-  const experienceDays = Math.ceil((experience % oneMonth) / oneDay);
+//   const experience = today.getTime() - firstDay.getTime();
+//   const experienceYears = Math.floor(experience / oneYear);
+//   const experienceMonths = Math.floor((experience % oneYear) / oneMonth);
+//   const experienceDays = Math.ceil((experience % oneMonth) / oneDay);
 
-  return `${experienceYears} years ${experienceMonths} month${
-    experienceMonths === 1 ? "" : "s"
-  } and ${experienceDays} day${experienceDays === 1 ? "" : "s"}`;
-};
+//   return `${experienceYears} years ${experienceMonths} month${
+//     experienceMonths === 1 ? '' : 's'
+//   } and ${experienceDays} day${experienceDays === 1 ? '' : 's'}`;
+// };
 
-const Resume = () => {
-  const experience = useMemo(() => getExperience(), []);
+export default function Resume() {
+  // const experience = useMemo(() => getExperience(), []);
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Sierra&apos;s Resume</title>
-      </Head>
-      <article className="content">
-        <h3>Web Developer</h3>
-        <p>
-          Sierra is a spirited full-stack engineer, project coordinator, and
-          technical leader who enjoys collaborating with diverse teams on
-          consumer-facing applications.
-        </p>
-        <br />
-        <h4>Testimonials</h4>
-        <Carousel
-          slides={testimonials.map((quote) => ({
-            id: quote.substring(0, 20),
-            value: <blockquote key={quote}>&ldquo;{quote}&rdquo;</blockquote>,
-          }))}
-        />
-        <TechSkills />
-        <Experiences />
-        <Education />
-      </article>
+      </Head> */}
+      <h3 className="text-2xl">Testimonials</h3>
+      <Carousel
+        slides={testimonials.map((quote) => ({
+          id: quote.substring(0, 20),
+          value: (
+            <blockquote key={quote}>
+              &ldquo;
+              {quote}
+              &rdquo;
+            </blockquote>
+          ),
+        }))}
+      />
+      <TechSkills />
+      <Experiences />
+      <Education />
     </>
   );
-};
-
-export default Resume;
+}

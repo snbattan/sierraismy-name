@@ -1,29 +1,26 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
-const CarouselArrow = ({
-  isRight,
+function CarouselArrow({
+  isRight = false,
   onClick,
 }: {
   isRight?: boolean;
   onClick: () => void;
-}) => (
-  <button
-    aria-label={`arrow-${isRight ? "right" : "left"}`}
-    className="material-icons"
-    onClick={onClick}
-    onKeyPress={onClick}
-    role="button"
-    tabIndex={0}
-  >
-    {`chevron_${isRight ? "right" : "left"}`}
-  </button>
-);
+}) {
+  return (
+    <button
+      aria-label={`arrow-${isRight ? 'right' : 'left'}`}
+      className="material-icons"
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+    >
+      {`chevron_${isRight ? 'right' : 'left'}`}
+    </button>
+  );
+}
 
-CarouselArrow.defaultProps = {
-  isRight: false,
-};
-
-const CarouselIndicator = ({
+function CarouselIndicator({
   activeIndex,
   index,
   onClick,
@@ -31,19 +28,20 @@ const CarouselIndicator = ({
   activeIndex: number;
   index: number;
   onClick: () => void;
-}) => (
-  <button
-    className="material-icons md-18"
-    onClick={onClick}
-    onKeyPress={onClick}
-    role="button"
-    tabIndex={0}
-  >
-    {`radio_button_${activeIndex === index ? "checked" : "unchecked"}`}
-  </button>
-);
+}) {
+  return (
+    <button
+      className="material-icons md-18"
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+    >
+      {`radio_button_${activeIndex === index ? 'checked' : 'unchecked'}`}
+    </button>
+  );
+}
 
-const CarouselSlide = ({
+function CarouselSlide({
   activeIndex,
   index,
   slide,
@@ -51,17 +49,19 @@ const CarouselSlide = ({
   activeIndex: number;
   index: number;
   slide: JSX.Element;
-}) => (
-  <li className={`carousel-slide ${index === activeIndex && "visible"}`}>
-    {slide}
-  </li>
-);
+}) {
+  return (
+    <li className={`carousel-slide ${index === activeIndex && 'visible'}`}>
+      {slide}
+    </li>
+  );
+}
 
-const Carousel = ({
+function Carousel({
   slides,
 }: {
   slides: Array<{ id: string; value: JSX.Element }>;
-}) => {
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [auto, setAuto] = useState(true);
 
@@ -107,7 +107,7 @@ const Carousel = ({
         </ul>
         <CarouselArrow isRight onClick={goToNextSlide} />
       </section>
-      <ul style={{ padding: "0px", textAlign: "center" }}>
+      <ul style={{ padding: '0px', textAlign: 'center' }}>
         {slides.map((slide, index) => (
           <CarouselIndicator
             key={`${slide.id}-indicator`}
@@ -119,6 +119,6 @@ const Carousel = ({
       </ul>
     </>
   );
-};
+}
 
 export default Carousel;
