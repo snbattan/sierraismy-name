@@ -1,13 +1,13 @@
 {
   "author": "Sierra Battan",
-  "background_color": "#35363a",
+  "background_color": "#e1eafb",
   "description": "Sierra Battan's personal website",
   "display": "standalone",
-  "homepage_url": "https://github.com/snbattan/sierraismy-name",
+  "homepage_url": "https://sierraismy.name",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "any",
       "type": "image/x-icon"
     },
     {
@@ -18,7 +18,7 @@
   "manifest_version": 2,
   "name": "Sierra Battan's personal website",
   "short_name": "Sierra Battan",
-  "start_url": ".",
+  "start_url": "/",
   "theme_color": "#80b0f8",
   "version": "1.1.0"
 }

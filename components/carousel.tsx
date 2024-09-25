@@ -8,14 +8,8 @@ function CarouselArrow({
   onClick: () => void;
 }) {
   return (
-    <button
-      aria-label={`arrow-${isRight ? 'right' : 'left'}`}
-      className="material-icons"
-      onClick={onClick}
-      role="button"
-      tabIndex={0}
-    >
-      {`chevron_${isRight ? 'right' : 'left'}`}
+    <button aria-hidden onClick={onClick} role="button" tabIndex={0}>
+      {isRight ? '>' : '<'}
     </button>
   );
 }
@@ -30,13 +24,8 @@ function CarouselIndicator({
   onClick: () => void;
 }) {
   return (
-    <button
-      className="material-icons md-18"
-      onClick={onClick}
-      role="button"
-      tabIndex={0}
-    >
-      {`radio_button_${activeIndex === index ? 'checked' : 'unchecked'}`}
+    <button aria-hidden onClick={onClick} role="button" tabIndex={0}>
+      {activeIndex === index ? '+' : '-'}
     </button>
   );
 }
@@ -51,9 +40,7 @@ function CarouselSlide({
   slide: JSX.Element;
 }) {
   return (
-    <li className={`carousel-slide ${index === activeIndex && 'visible'}`}>
-      {slide}
-    </li>
+    <li className={`${index !== activeIndex ? 'hidden' : ''}`}>{slide}</li>
   );
 }
 
@@ -93,7 +80,7 @@ function Carousel({
 
   return (
     <>
-      <section className="carousel">
+      <section className="flex min-h-[350px] w-full items-center justify-between gap-2 sm:min-h-[200px] md:gap-8 lg:min-h-[120px] xl:min-h-[100px]">
         <CarouselArrow onClick={goToPrevSlide} />
         <ul className="carousel-slides">
           {slides.map((slide, index) => (
@@ -107,7 +94,7 @@ function Carousel({
         </ul>
         <CarouselArrow isRight onClick={goToNextSlide} />
       </section>
-      <ul style={{ padding: '0px', textAlign: 'center' }}>
+      <ul className="flex gap-2">
         {slides.map((slide, index) => (
           <CarouselIndicator
             key={`${slide.id}-indicator`}
